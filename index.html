@@ -4,15 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oludeniz Tours | Ölüdeniz Yamaç Paraşütü & Aktiviteler</title>
-<meta name="description" content="Oludeniz Tours ile gökyüzüne dokunun! Ölüdeniz'de yamaç paraşütü, tekne turu, dalış ve daha fazlası. WhatsApp'tan hemen rezervasyon yapın.">
+<meta name="description" content="Oludeniz Tours ile gökyüzüne dokunun! Ölüdeniz'de yamaç paraşütü, tekne turu, dalış, safari, araba/motosiklet/ATV kiralama, villa ve günlük ev kiralama ve Dalaman Havalimanı'ndan Fethiye, Ölüdeniz ve Marmaris'e VIP transfer. WhatsApp'tan hemen rezervasyon yapın.">
 <meta property="og:title" content="Oludeniz Tours | Ölüdeniz Yamaç Paraşütü & Aktiviteler">
 <meta property="og:description" content="Ölüdeniz'de yamaç paraşütü, tekne turu, dalış ve daha fazlası. WhatsApp'tan hemen rezervasyon!">
 <meta property="og:image" content="https://skywalkersparagliding.com/api/images/2aedfafb833d2f25.webp">
 <meta name="theme-color" content="#0ea5e9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#0ea5e9; --blue-d:#0284c7; --dark:#0f172a; --gray:#64748b;
-  --bg:#f8fafc; --white:#fff; --green:#25d366; --amber:#f59e0b;
+  --bg:#f8fafc; --white:#fff; --green:#25d366; --amber:#f59e0b; --red:#ef4444;
   --radius:16px; --shadow:0 4px 20px rgba(15,23,42,.08);
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -20,38 +23,73 @@ html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--dark);line-height:1.5;padding-bottom:72px}
 img{display:block;max-width:100%}
 
-/* Header */
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(15,23,42,.06)}
-.hwrap{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1100px;margin:0 auto}
-.logo{font-weight:800;font-size:1.15rem;color:var(--dark);text-decoration:none}
-.logo span{color:var(--blue)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(15,23,42,.07)}
+.hwrap{display:flex;align-items:center;gap:16px;padding:10px 16px;max-width:1240px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--dark)}
+.logo .mk{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue),#0369a1);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:1.3rem;box-shadow:0 4px 12px rgba(14,165,233,.35)}
+.logo b{display:block;font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:1.25rem;line-height:1}
+.logo b i{font-style:normal;color:var(--blue)}
+.logo small{display:block;font-size:.66rem;color:var(--gray);margin-top:3px;font-weight:600}
+.nav{display:none;gap:28px;margin:0 auto}
+.nav a{color:#334155;text-decoration:none;font-weight:600;font-size:.95rem;transition:color .15s}
+.nav a:hover{color:var(--blue)}
+.hact{display:flex;align-items:center;gap:8px;margin-left:auto}
+.tel{display:none;align-items:center;gap:6px;background:#fff1f2;color:#be123c;font-weight:800;font-size:.85rem;padding:8px 12px;border-radius:10px;text-decoration:none;border:1px solid #fecdd3}
+.hwa{display:none;background:var(--blue);color:#fff;font-weight:700;padding:9px 18px;border-radius:10px;text-decoration:none;font-size:.88rem}
+@media(min-width:960px){.nav{display:flex}.tel,.hwa{display:inline-flex}.hact{margin-left:0}}
 .lang-btn{border:1.5px solid var(--blue);background:var(--white);color:var(--blue);font-weight:700;padding:6px 14px;border-radius:99px;cursor:pointer;font-size:.85rem}
 
-/* Hero */
-.hero{position:relative;min-height:62vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.15) 30%,rgba(15,23,42,.75))}
-.hero-c{position:relative;z-index:2;padding:24px 16px 32px;max-width:1100px;margin:0 auto;width:100%}
-.hero h1{font-size:clamp(1.6rem,6vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:8px}
-.hero p{font-size:1.05rem;opacity:.92;margin-bottom:18px}
+.hero{position:relative;color:#fff;overflow:hidden;padding:44px 0 26px}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,47,73,.45) 0%,rgba(8,47,73,.12) 38%,rgba(2,6,23,.72) 100%)}
+.hero-c{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:0 16px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 15px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);font-weight:700;font-size:.82rem;margin-bottom:16px}
+.hero h1{font-family:'Fraunces',Georgia,serif;font-weight:800;font-size:clamp(2.7rem,11vw,6rem);line-height:.96;letter-spacing:-.025em;text-shadow:0 6px 30px rgba(0,0,0,.3);margin-bottom:14px}
+.hero h1 em{font-style:italic;font-weight:600;color:#7dd3fc}
+.hero .lead{font-size:clamp(1rem,2.6vw,1.35rem);font-weight:600;max-width:660px;margin-bottom:12px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.checks{display:flex;flex-wrap:wrap;gap:6px 20px;font-weight:700;font-size:.88rem;margin-bottom:24px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.checks span::before{content:"✓ ";color:#4ade80}
+.hrate{display:none;position:absolute;z-index:3;right:32px;top:40px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(12px);border-radius:18px;padding:16px 20px;text-align:center}
+.hrate b{display:block;font-family:'Fraunces',Georgia,serif;font-size:2rem;line-height:1}
+.hrate .st{color:#fbbf24;letter-spacing:2px;font-size:.95rem;margin:4px 0}
+.hrate small{font-size:.75rem;font-weight:700;opacity:.9}
+@media(min-width:1100px){.hrate{display:block}}
+.search{background:rgba(255,255,255,.97);color:var(--dark);border-radius:20px;box-shadow:0 24px 60px rgba(2,6,23,.4);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:8px;max-width:1080px}
+.sf{padding:10px 14px;border-bottom:1px solid #e2e8f0}
+.sf.wide{grid-column:1/-1}
+.sf label{display:block;font-size:.66rem;font-weight:800;letter-spacing:.09em;color:var(--gray);text-transform:uppercase;margin-bottom:3px}
+.sf input,.sf select{width:100%;border:none;outline:none;background:transparent;font:inherit;font-size:1rem;font-weight:600;color:var(--dark);padding:2px 0;-webkit-appearance:none;appearance:none}
+.sf select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right center;padding-right:18px}
+.sbtn{grid-column:1/-1;margin-top:8px;border:none;cursor:pointer;background:linear-gradient(135deg,#fb923c,#f97316);color:#fff;font-weight:800;font-size:1rem;font-family:inherit;border-radius:14px;padding:15px 22px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 8px 22px rgba(249,115,22,.4);transition:transform .15s}
+.sbtn:hover{transform:translateY(-1px)}
+.sbtn svg{width:18px;height:18px}
+@media(min-width:760px){.search{grid-template-columns:minmax(0,2.2fr) minmax(0,1.1fr) minmax(0,1fr) auto;align-items:center;padding:10px}.sf,.sf.wide{grid-column:auto;border-bottom:none;border-right:1px solid #e2e8f0;padding:8px 18px}.sf:nth-child(3){border-right:none}.sbtn{grid-column:auto;margin:0;min-height:62px;padding:0 30px}}
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px;max-width:1080px}
+@media(min-width:760px){.cats{grid-template-columns:repeat(8,minmax(0,1fr));gap:12px;margin-top:18px}}
+.hero h1,.hero .lead{overflow-wrap:break-word}
+.sf input[type=date]{min-width:0;max-width:100%}
+@media(max-width:420px){.logo small{display:none}.logo b{font-size:1.1rem}.logo .mk{width:34px;height:34px;font-size:1.1rem}.cats .cat{font-size:.64rem;padding:10px 2px 8px}}
+.cat{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:14px;padding:12px 4px 10px;text-align:center;color:var(--dark);font-weight:800;font-size:.7rem;cursor:pointer;border:none;font-family:inherit;transition:transform .15s,background .15s,box-shadow .15s;box-shadow:0 6px 18px rgba(2,6,23,.18);line-height:1.2}
+.cat:hover{transform:translateY(-4px);background:#fff;box-shadow:0 12px 26px rgba(2,6,23,.25)}
+.cat i{display:block;font-style:normal;font-size:1.55rem;margin-bottom:5px}
+@media(min-width:760px){.cat{font-size:.84rem;padding:16px 6px 14px}.cat i{font-size:2rem}}
+@media(min-width:960px){.hero{padding:72px 0 40px}}
 .btn-wa{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:700;padding:14px 24px;border-radius:99px;text-decoration:none;font-size:1rem;box-shadow:0 6px 18px rgba(37,211,102,.4)}
 .btn-wa svg{width:20px;height:20px;fill:#fff}
 
-/* Trust bar */
 .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:14px 16px;max-width:1100px;margin:0 auto;text-align:center}
 .trust b{display:block;color:var(--blue);font-size:1.05rem}
 .trust small{color:var(--gray);font-size:.72rem}
 
-/* Sections */
 section{padding:28px 16px;max-width:1100px;margin:0 auto}
 h2{font-size:1.45rem;font-weight:800;margin-bottom:4px}
 .sub{color:var(--gray);margin-bottom:18px;font-size:.95rem}
 
-/* Cards */
 .grid{display:grid;gap:16px}
 @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
-.card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer}
 .card .im{position:relative;aspect-ratio:4/3;overflow:hidden}
 .card .im img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
 .card:active .im img{transform:scale(1.04)}
@@ -65,9 +103,10 @@ h2{font-size:1.45rem;font-weight:800;margin-bottom:4px}
 .prow{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .price small{display:block;color:var(--gray);font-size:.7rem}
 .price b{font-size:1.25rem;color:var(--dark)}
+.price .old{text-decoration:line-through;color:var(--gray);font-weight:600;font-size:.85rem;margin-left:6px}
 .bk{background:var(--green);color:#fff;font-weight:700;font-size:.82rem;padding:10px 16px;border-radius:99px;text-decoration:none;white-space:nowrap}
+.more{display:block;text-align:center;color:var(--blue);font-weight:700;font-size:.85rem;margin-top:10px}
 
-/* Why us */
 .why{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 @media(min-width:760px){.why{grid-template-columns:repeat(4,1fr)}}
 .why div{background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
@@ -75,13 +114,11 @@ h2{font-size:1.45rem;font-weight:800;margin-bottom:4px}
 .why b{display:block;font-size:.92rem;margin-bottom:2px}
 .why p{color:var(--gray);font-size:.78rem}
 
-/* Reviews */
 .rev{background:var(--white);border-radius:var(--radius);padding:22px;text-align:center;box-shadow:var(--shadow)}
 .stars{color:var(--amber);font-size:1.3rem;letter-spacing:3px}
 .rev b{font-size:1.2rem}
 .rev p{color:var(--gray);font-size:.85rem}
 
-/* Contact */
 .contact{background:linear-gradient(135deg,var(--blue),var(--blue-d));border-radius:var(--radius);color:#fff;padding:26px 20px;text-align:center}
 .contact h2{color:#fff}
 .contact p{opacity:.9;font-size:.92rem;margin-bottom:16px}
@@ -90,47 +127,104 @@ h2{font-size:1.45rem;font-weight:800;margin-bottom:4px}
 .call{background:rgba(255,255,255,.18);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
 .wa2{background:var(--green);color:#fff}
 
-footer{text-align:center;padding:20px 16px;color:var(--gray);font-size:.78rem}
+footer{text-align:center;padding:24px 16px 28px;color:var(--gray);font-size:.78rem}
+footer .flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:10px}
+footer a{color:var(--gray);text-decoration:none;font-weight:600}
 
-/* Bottom bar (mobile) */
 .bottombar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:flex;gap:10px;padding:10px 14px;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);box-shadow:0 -4px 16px rgba(15,23,42,.1)}
 .bottombar a{flex:1;text-align:center;padding:13px;border-radius:99px;font-weight:800;font-size:.92rem;text-decoration:none}
 .bb-call{background:#e2e8f0;color:var(--dark)}
 .bb-wa{background:var(--green);color:#fff}
 @media(min-width:960px){.bottombar{display:none}body{padding-bottom:0}}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:100;display:none;align-items:flex-end;justify-content:center}
+.modal.open{display:flex}
+.sheet{background:var(--bg);width:100%;max-width:680px;max-height:92vh;overflow-y:auto;border-radius:20px 20px 0 0;position:relative;-webkit-overflow-scrolling:touch}
+@media(min-width:960px){.modal{align-items:center;padding:24px}.sheet{border-radius:20px;max-height:88vh}}
+.mx{position:sticky;top:12px;margin-left:auto;margin-right:12px;z-index:5;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(15,23,42,.55);color:#fff;border:none;font-size:1.1rem;cursor:pointer;float:right}
+.mhero{position:relative;aspect-ratio:16/10;margin-top:-48px}
+.mhero img{width:100%;height:100%;object-fit:cover}
+.mbody{padding:18px 16px 110px}
+.mbody h3{font-size:1.35rem;font-weight:800}
+.mmeta{color:var(--gray);font-size:.85rem;margin:4px 0 10px}
+.mprice{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.mprice b{font-size:1.5rem}
+.mprice .old{text-decoration:line-through;color:var(--gray);font-size:1rem}
+.mdep{color:var(--gray);font-size:.8rem;margin-bottom:14px}
+.msec{background:var(--white);border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:var(--shadow)}
+.msec h4{font-size:.95rem;font-weight:800;margin-bottom:8px}
+.msec p{font-size:.88rem;color:#334155}
+.msec ul{list-style:none}
+.msec li{font-size:.86rem;color:#334155;padding:3px 0 3px 22px;position:relative}
+.msec li::before{content:"•";position:absolute;left:6px;color:var(--blue)}
+.msec.inc li::before{content:"✓";color:#16a34a;font-weight:700}
+.msec.exc li::before{content:"✕";color:var(--red);font-weight:700}
+.step{display:flex;gap:10px;padding:7px 0}
+.step .n{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e0f2fe;color:var(--blue-d);font-weight:800;font-size:.72rem;display:flex;align-items:center;justify-content:center}
+.step b{display:block;font-size:.86rem}
+.step p{font-size:.8rem;color:var(--gray)}
+.faqd{border-bottom:1px solid #e2e8f0}
+.faqd:last-child{border-bottom:none}
+.faqd summary{font-size:.86rem;font-weight:700;cursor:pointer;padding:9px 22px 9px 0;list-style:none;position:relative}
+.faqd summary::-webkit-details-marker{display:none}
+.faqd summary::after{content:"+";position:absolute;right:4px;top:7px;color:var(--blue);font-size:1.1rem;font-weight:800}
+.faqd[open] summary::after{content:"−"}
+.faqd p{font-size:.82rem;color:#475569;padding:0 0 10px}
+.mcta{position:sticky;bottom:0;margin:0 -16px -110px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(248,250,252,.97);backdrop-filter:blur(8px);box-shadow:0 -4px 16px rgba(15,23,42,.08)}
+.mcta a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff;font-weight:800;padding:14px;border-radius:99px;text-decoration:none;font-size:1rem}
+body.lock{overflow:hidden}
 </style>
 </head>
 <body>
 
 <header>
   <div class="hwrap">
-    <a class="logo" href="#">Oludeniz<span>Tours</span></a>
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <a class="logo" href="#"><span class="mk">O</span><span><b>Oludeniz<i>Tours</i></b><small data-tr="Ölüdeniz · Fethiye · Marmaris" data-en="Ölüdeniz · Fethiye · Marmaris">Ölüdeniz · Fethiye · Marmaris</small></span></a>
+    <nav class="nav">
+      <a href="#activities" data-tr="Aktiviteler" data-en="Activities">Aktiviteler</a>
+      <a href="#packages" data-tr="Paket Turlar" data-en="Packages">Paket Turlar</a>
+      <a href="#transfer" data-tr="Transfer" data-en="Transfer">Transfer</a>
+      <a href="#rent" data-tr="Araç Kiralama" data-en="Rentals">Araç Kiralama</a>
+      <a href="#stay" data-tr="Villa & Ev" data-en="Villas & Homes">Villa & Ev</a>
+      <a href="iletisim.html" data-tr="İletişim" data-en="Contact">İletişim</a>
+    </nav>
+    <div class="hact">
+      <a class="tel" href="tel:+905364616674">📞 0536 461 66 74</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+      <a class="hwa" href="https://wa.me/905364616674?text=Merhaba%2C%20rezervasyon%20yapmak%20istiyorum" target="_blank" rel="noopener" data-tr="Rezervasyon" data-en="Book Now">Rezervasyon</a>
+    </div>
   </div>
 </header>
 
 <div class="hero">
   <img src="https://skywalkersparagliding.com/api/images/2aedfafb833d2f25.webp" alt="Ölüdeniz Yamaç Paraşütü" fetchpriority="high">
+  <div class="hrate"><b>5.0</b><div class="st">★★★★★</div><small data-tr="500+ Google yorumu" data-en="500+ Google reviews">500+ Google yorumu</small></div>
   <div class="hero-c">
-    <h1 data-tr="Özgürlüğe Kanat Aç" data-en="Spread Your Wings to Freedom">Özgürlüğe Kanat Aç</h1>
-    <p data-tr="Ölüdeniz'in eşsiz manzarasında yamaç paraşütü, tekne turu, dalış ve daha fazlası." data-en="Paragliding, boat tours, diving and more over the stunning Blue Lagoon of Ölüdeniz.">Ölüdeniz'in eşsiz manzarasında yamaç paraşütü, tekne turu, dalış ve daha fazlası.</p>
-    <a class="btn-wa" href="https://wa.me/905364616674?text=Merhaba%2C%20rezervasyon%20yapmak%20istiyorum" target="_blank" rel="noopener">
-      <svg viewBox="0 0 32 32"><path d="M16 0C7.2 0 0 7.2 0 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2C10.7 31.3 13.3 32 16 32c8.8 0 16-7.2 16-16S24.8 0 16 0zm0 29.3c-2.4 0-4.8-.6-6.9-1.9l-.5-.3-4.9 1.3 1.3-4.8-.3-.5C3.3 21 2.7 18.5 2.7 16 2.7 8.7 8.7 2.7 16 2.7S29.3 8.7 29.3 16 23.3 29.3 16 29.3zm7.3-9.9c-.4-.2-2.4-1.2-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.6-.2.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.2-1.2-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.4 3.9 1.6 4.2c.2.3 2.8 4.3 6.8 6 .9.4 1.7.7 2.3.9 1 .3 1.8.3 2.5.2.8-.1 2.4-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5z"/></svg>
-      <span data-tr="WhatsApp'tan Rezervasyon" data-en="Book on WhatsApp">WhatsApp'tan Rezervasyon</span>
-    </a>
+    <div class="eyebrow">🪂 <span data-tr="Ölüdeniz'in dijital kapısı" data-en="Your digital gateway to Ölüdeniz">Ölüdeniz'in dijital kapısı</span></div>
+    <h1><span data-tr="Ölüdeniz'i" data-en="Discover">Ölüdeniz'i</span> <em data-tr="Keşfet" data-en="Ölüdeniz">Keşfet</em></h1>
+    <p class="lead" data-tr="Yamaç paraşütü, tekne turları, dalış, safari ve havalimanı transferi — hepsi tek yerde." data-en="Paragliding, boat tours, diving, safaris and airport transfers — all in one place.">Yamaç paraşütü, tekne turları, dalış, safari ve havalimanı transferi — hepsi tek yerde.</p>
+    <div class="checks"><span data-tr="Yerel uzmanlık" data-en="Local expertise">Yerel uzmanlık</span><span data-tr="7/24 WhatsApp destek" data-en="24/7 WhatsApp support">7/24 WhatsApp destek</span><span data-tr="Güvenli rezervasyon" data-en="Secure booking">Güvenli rezervasyon</span></div>
+    <form class="search" onsubmit="return doSearch(event)">
+      <div class="sf wide"><label for="sq" data-tr="Ne arıyorsunuz?" data-en="What are you looking for?">Ne arıyorsunuz?</label><select id="sq"></select></div>
+      <div class="sf"><label for="sd" data-tr="Tarih" data-en="Date">Tarih</label><input type="date" id="sd"></div>
+      <div class="sf"><label for="sg" data-tr="Kişi" data-en="Guests">Kişi</label><select id="sg"></select></div>
+      <button class="sbtn" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span data-tr="Müsaitlik Sor" data-en="Check Availability">Müsaitlik Sor</span></button>
+    </form>
+    <div class="cats" id="cats"></div>
   </div>
 </div>
 
 <div class="trust">
-  <div><b>8+</b><small data-tr="Aktivite" data-en="Activities">Aktivite</small></div>
+  <div><b>9+</b><small data-tr="Aktivite" data-en="Activities">Aktivite</small></div>
   <div><b>7/24</b><small data-tr="Destek" data-en="Support">Destek</small></div>
   <div><b>10K+</b><small data-tr="Mutlu Müşteri" data-en="Happy Guests">Mutlu Müşteri</small></div>
   <div><b>5.0 ★</b><small data-tr="Google Puanı" data-en="Google Rating">Google Puanı</small></div>
 </div>
 
 <section id="activities">
-  <h2 data-tr="Öne Çıkan Aktiviteler" data-en="Featured Activities">Öne Çıkan Aktiviteler</h2>
-  <p class="sub" data-tr="En iyi turları ve aktiviteleri keşfedin" data-en="Discover the best tours and activities">En iyi turları ve aktiviteleri keşfedin</p>
+  <h2 data-tr="Aktiviteler" data-en="Activities">Aktiviteler</h2>
+  <p class="sub" data-tr="Karta dokunun, tüm detayları görün" data-en="Tap a card to see full details">Karta dokunun, tüm detayları görün</p>
   <div class="grid" id="actGrid"></div>
 </section>
 
@@ -138,6 +232,24 @@ footer{text-align:center;padding:20px 16px;color:var(--gray);font-size:.78rem}
   <h2 data-tr="Popüler Paket Turlar" data-en="Popular Package Tours">Popüler Paket Turlar</h2>
   <p class="sub" data-tr="En çok tercih edilenler — tek pakette birden fazla macera" data-en="Most preferred — multiple adventures in one package">En çok tercih edilenler — tek pakette birden fazla macera</p>
   <div class="grid" id="pkgGrid"></div>
+</section>
+
+<section id="transfer">
+  <h2 data-tr="Havalimanı Transferi" data-en="Airport Transfer">Havalimanı Transferi</h2>
+  <p class="sub" data-tr="Dalaman Havalimanı'ndan Fethiye, Ölüdeniz ve Marmaris'e özel VIP transfer — fiyatlar araç başıdır" data-en="Private VIP transfer from Dalaman Airport to Fethiye, Ölüdeniz and Marmaris — prices are per vehicle">Dalaman Havalimanı'ndan Fethiye, Ölüdeniz ve Marmaris'e özel VIP transfer — fiyatlar araç başıdır</p>
+  <div class="grid" id="trfGrid"></div>
+</section>
+
+<section id="rent">
+  <h2 data-tr="Araç Kiralama" data-en="Vehicle Rental">Araç Kiralama</h2>
+  <p class="sub" data-tr="Araba, motosiklet / scooter ve ATV kiralama — otelinize teslim, günlük ve haftalık seçenekler" data-en="Car, motorbike / scooter and ATV rental — delivered to your hotel, daily and weekly options">Araba, motosiklet / scooter ve ATV kiralama — otelinize teslim, günlük ve haftalık seçenekler</p>
+  <div class="grid" id="rentGrid"></div>
+</section>
+
+<section id="stay">
+  <h2 data-tr="Villa & Günlük Ev Kiralama" data-en="Villa & Holiday Home Rental">Villa & Günlük Ev Kiralama</h2>
+  <p class="sub" data-tr="Ölüdeniz, Hisarönü, Ovacık ve Fethiye'de havuzlu villalar ve günlük kiralık evler" data-en="Private-pool villas and holiday homes in Ölüdeniz, Hisarönü, Ovacık and Fethiye">Ölüdeniz, Hisarönü, Ovacık ve Fethiye'de havuzlu villalar ve günlük kiralık evler</p>
+  <div class="grid" id="stayGrid"></div>
 </section>
 
 <section>
@@ -171,6 +283,12 @@ footer{text-align:center;padding:20px 16px;color:var(--gray);font-size:.78rem}
 </section>
 
 <footer>
+  <div class="flinks">
+    <a href="iletisim.html" data-tr="İletişim" data-en="Contact">İletişim</a>
+    <a href="iptal-iade.html" data-tr="İptal & İade" data-en="Cancellation & Refund">İptal & İade</a>
+    <a href="gizlilik.html" data-tr="Gizlilik" data-en="Privacy">Gizlilik</a>
+    <a href="kullanim-sartlari.html" data-tr="Kullanım Şartları" data-en="Terms of Use">Kullanım Şartları</a>
+  </div>
   <p>© 2026 Oludeniz Tours — Fethiye / Ölüdeniz</p>
 </footer>
 
@@ -179,54 +297,596 @@ footer{text-align:center;padding:20px 16px;color:var(--gray);font-size:.78rem}
   <a class="bb-wa" href="https://wa.me/905364616674?text=Merhaba%2C%20rezervasyon%20yapmak%20istiyorum" target="_blank" rel="noopener" data-tr="WhatsApp Rezervasyon" data-en="Book on WhatsApp">WhatsApp Rezervasyon</a>
 </div>
 
+<div class="modal" id="modal" onclick="if(event.target===this)closeM()">
+  <div class="sheet">
+    <button class="mx" onclick="closeM()">✕</button>
+    <div id="msheet"></div>
+  </div>
+</div>
+
 <script>
 const IMG = 'https://skywalkersparagliding.com/api/images/';
 const WA = 'https://wa.me/905364616674?text=';
 
-const activities = [
- {img:'e54c5031df519ed5.webp', tr:{n:'Yamaç Paraşütü',loc:'Fethiye/Ölüdeniz · 30 dk',f:['Deneyimli Pilotlar','Güvenli Uçuş','25-30 Dk Uçuş']}, en:{n:'Paragliding',loc:'Fethiye/Ölüdeniz · 30 min',f:['Experienced Pilots','Safe Flight','25-30 Min Flight']}, p:'6.500 ₺', tag:{tr:'Popüler',en:'Popular'}},
- {img:'d18349b455543e88.webp', tr:{n:'Tüplü Dalış',loc:'Fethiye/Ölüdeniz · 30 dk',f:['25 Dk Tüplü Dalış','Tecrübeli Dalgıçlar']}, en:{n:'Scuba Diving',loc:'Fethiye/Ölüdeniz · 30 min',f:['25 Min Dive','Experienced Divers']}, p:'3.000 ₺', tag:{tr:'Yeni',en:'New'}},
- {img:'df1e254f8c8ef107.webp', tr:{n:'Tekne Turu',loc:'Fethiye Koyları · 6 saat',f:['6 Koy Turu','Yüzme Molaları','Aile Teknesi']}, en:{n:'Boat Tour',loc:'Fethiye Bays · 6 hours',f:['6 Bays Tour','Swimming Breaks','Family Boat']}, p:'2.000 ₺', tag:{tr:'Yeni',en:'New'}},
- {img:'fb489335d7c59aad.webp', tr:{n:'Rafting Turu',loc:'Dalaman Çayı · 7 saat',f:['Öğle Yemeği','Otel Transferi','Sigorta']}, en:{n:'Rafting Tour',loc:'Dalaman River · 7 hours',f:['Lunch','Hotel Transfer','Insurance']}, p:'3.000 ₺', tag:{tr:'Yeni',en:'New'}},
- {img:'03a371224d202384.webp', tr:{n:'Jeep Safari',loc:'Fethiye/Saklıkent · 7 saat',f:['Profesyonel Sürücüler','Doğa ve Köy Keşfi','Saklıkent Kanyonu']}, en:{n:'Jeep Safari',loc:'Fethiye/Saklıkent · 7 hours',f:['Pro Drivers','Nature & Villages','Saklıkent Canyon']}, p:'1.500 ₺', tag:{tr:'Yeni',en:'New'}},
- {img:'2ac46d33b5eb8d45.webp', tr:{n:'ATV Turu',loc:'Fethiye Kayaköy · 1 saat',f:['60 Dk Sürüş','Otel Transferi','Sigorta']}, en:{n:'ATV Tour',loc:'Fethiye Kayaköy · 1 hour',f:['60 Min Ride','Hotel Transfer','Insurance']}, p:'2.000 ₺', tag:{tr:'Yeni',en:'New'}},
- {img:'9d690a429b03b7db.webp', tr:{n:'Sürat Teknesi',loc:'Fethiye/Ölüdeniz · 2 saat',f:['Özel Kaptan','Özel Tekne','Kelebekler Vadisi']}, en:{n:'Speed Boat',loc:'Fethiye/Ölüdeniz · 2 hours',f:['Private Captain','Private Boat','Butterfly Valley']}, p:'8.000 ₺', tag:{tr:'Yeni',en:'New'}}
+const A = [
+{img:'e54c5031df519ed5.webp',p:'6.500 ₺',dep:'1.000 ₺',tag:{tr:'Popüler',en:'Popular'},
+ tr:{n:'Yamaç Paraşütü',loc:'Fethiye/Ölüdeniz · 25-30 dk uçuş · toplam 1,5 saat',f:['Deneyimli Pilotlar','Güvenli Uçuş','GoPro Çekim'],
+  desc:'Hayallerinizi ertelemeyin, gökyüzüne dokunun! 🪂 20+ yıllık profesyonel tecrübemiz ve en üst segment güvenlik standartlarımızla, dünyanın en eşsiz manzarasında süzülmeye hazır mısınız?',
+  inc:['Fotoğraf & Video: GoPro ile 150-200 HD fotoğraf, video ve 360° çekim — uçuş sonrası telefonunuza aktarılır','Otel transferi (gidiş-dönüş)','Tam kapsamlı uçuş sigortası (Babadağ çıkışından inişe kadar)'],
+  info:['Buluşma: Ölüdeniz Sahil — aktivite saatinden 30 dk önce','Minimum yaş: 4','İniş alanı: Ölüdeniz Plajı','Uçuş yüksekliği: 1965 metre','Kilo limiti: Kadın 80 kg, Erkek 100 kg','Diller: TR / EN'],
+  prog:[['Konforlu Ulaşım','Uçuştan 30-40 dk önce otelinizden alınıyorsunuz.'],['Hazırlık ve Emanet','Eşyalarınızı güvenli emanet alanına bırakıyorsunuz.'],['Zirveye Yolculuk',"Babadağ'ın zirvesine 25-30 dk manzaralı tırmanış."],['Güvenlik ve Brifing','Pilotunuz ekipman ve uçuş hakkında kısa bilgi verir.'],['Havalanma Zamanı',"Ölüdeniz'in turkuaz suları üzerinde 25-30 dk özgürlük."],['Anı Ölümsüzleştirin','GoPro ile tüm anlarınız kaydedilir.'],['İniş ve Aktarım','Sahile yumuşak iniş, çekimler anında telefonunuza.'],['Dönüş','Otelinize güvenli servisle bırakılırsınız.']],
+  reg:['Fethiye','Ovacık','Ölüdeniz'],bring:['Spor ayakkabı','Güneş gözlüğü'],ban:['Terlik','Özel kameranız ile çekim'],
+  extra:['Kadın Pilot: +2.000 ₺','Gün Batımı uçuşu: fiyat farkı uygulanır','Ekstra Akrobasi: havada adrenalin dolu manevralar','Kilo aşımı (Kadın 80+ / Erkek 100+ kg): +2.000 ₺']},
+ en:{n:'Paragliding',loc:'Fethiye/Ölüdeniz · 25-30 min flight · 1.5h total',f:['Experienced Pilots','Safe Flight','GoPro Footage'],
+  desc:"Don't postpone your dreams — touch the sky! 🪂 With 20+ years of professional experience and top-tier safety standards, get ready to glide over the world's most unique view.",
+  inc:['Photos & Video: 150-200 HD photos, videos and 360° shots with GoPro — transferred to your phone after the flight','Hotel transfer (round trip)','Full flight insurance (from Babadağ ascent to landing)'],
+  info:['Meeting point: Ölüdeniz Beach — 30 min before activity time','Minimum age: 4','Landing area: Ölüdeniz Beach','Flight altitude: 1965 m','Weight limit: Women 80 kg, Men 100 kg','Languages: TR / EN'],
+  prog:[['Comfortable Pickup','Picked up from your hotel 30-40 min before the flight.'],['Preparation','Leave your belongings in our secure storage.'],['Ride to the Summit','Scenic 25-30 min drive to the top of Babadağ.'],['Safety Briefing','Your pilot explains the takeoff and flight.'],['Takeoff','25-30 min of freedom over the turquoise Blue Lagoon.'],['Capture the Moment','Every moment recorded with GoPro.'],['Landing & Transfer','Soft landing on the beach, footage sent to your phone.'],['Return','Safe shuttle back to your hotel.']],
+  reg:['Fethiye','Ovacık','Ölüdeniz'],bring:['Sport shoes','Sunglasses'],ban:['Flip-flops','Filming with your own camera'],
+  extra:['Female Pilot: +2,000 TL','Sunset flight: price difference applies','Extra Acrobatics: adrenaline-filled maneuvers','Overweight (Women 80+ / Men 100+ kg): +2,000 TL']}},
+
+{img:'d18349b455543e88.webp',p:'3.000 ₺',dep:'500 ₺',tag:{tr:'Yeni',en:'New'},
+ tr:{n:'Tüplü Dalış',loc:'Fethiye/Ölüdeniz · toplam 1 saat',f:['25 Dk Su Altı','Tecrübeli Dalgıçlar','Ekipman Dahil'],
+  desc:"Derinlerdeki sessizliğe yolculuk 🌊 Gökyüzünden sonra Ölüdeniz'in bir de kalbine inmeye ne dersiniz? Profesyonel eğitmenlerimiz ve sertifikalı donanımımızla, mavinin en berrak tonunda keşfe çıkıyoruz.",
+  inc:['Dalış ekipmanları','Sigorta','Profesyonel eğitmen'],exc:['Yemek ve içecekler','Fotoğraf ve video','Otel transferi'],
+  info:['Buluşma: Ölüdeniz Sahil','Minimum yaş: 12','Toplam süre: 1 saat — 25 dk su altında','Yüzme bilmek gerekmez','Fotoğraflarınız için telefonunuzda 2-3 GB boş alan bulundurun','Diller: TR / EN'],
+  prog:[['Maviye Yelken Açın','Gizli koylara 10 dk speedboat yolculuğu, ekipman hazırlığı.'],['Keşif Dalışı','Rehber eşliğinde 25 dk büyüleyici su altı keşfi.'],['Anılarınız','Su altı kameralarıyla HD çekim — dilerseniz satın alabilirsiniz.'],['Kıyıya Dönüş','Dinlenme, yüzme ve sahile dönüş.']],
+  bring:['Güneş kremi','Şort, mayo, havlu'],ban:['Kendi kameranız ile çekim'],extra:['+1 Misafir: +1.250 ₺']},
+ en:{n:'Scuba Diving',loc:'Fethiye/Ölüdeniz · 1 hour total',f:['25 Min Underwater','Experienced Divers','Equipment Included'],
+  desc:"A journey into the silence of the deep 🌊 After the sky, how about discovering the heart of Ölüdeniz? With professional instructors and certified equipment, we explore the clearest shade of blue.",
+  inc:['Diving equipment','Insurance','Professional instructor'],exc:['Food and drinks','Photos and video','Hotel transfer'],
+  info:['Meeting point: Ölüdeniz Beach','Minimum age: 12','Total duration: 1 hour — 25 min underwater','No swimming skills required','Keep 2-3 GB free on your phone for photos','Languages: TR / EN'],
+  prog:[['Set Sail','10 min speedboat ride to hidden bays, equipment prep.'],['Discovery Dive','25 min guided underwater exploration.'],['Your Memories','HD underwater footage — available for purchase.'],['Return','Relax, swim and head back to shore.']],
+  bring:['Sunscreen','Shorts, swimsuit, towel'],ban:['Filming with your own camera'],extra:['+1 Guest: +1,250 TL']}},
+
+{img:'df1e254f8c8ef107.webp',p:'2.000 ₺',dep:'500 ₺',tag:{tr:'Yeni',en:'New'},
+ tr:{n:'Tekne Turu',loc:'Fethiye Koyları · 10:30-17:00 (6+ saat)',f:['6 Koy','Öğle Yemeği','Aile Dostu'],
+  desc:'⚓ Rotalar: Kelebekler Vadisi, Soğuk Su, St. Nicholas, Darboğaz, Akvaryum, Deve Plajı. Gürültülü aktivitelerden uzak, rahatlatıcı müzik ve aile dostu ortamda 6 koyda yüzme molaları.',
+  inc:['Otel transferi','Sigorta','Öğle yemeği'],exc:['Bar','İçecekler'],
+  info:['Buluşma: Ölüdeniz Sahil','Her yaşa uygun (0-1 yaş dahil)','Süre: 10:30 - 17:00','Diller: TR / EN'],
+  reg:['Fethiye Merkez','Hisarönü','Çalış','Ölüdeniz'],bring:['Mayo','Havlu','Güneş kremi','Şapka'],ban:['Dışarıdan yiyecek ve içecek'],
+  extra:['0-2 yaş bebekler: ücretsiz','2-5 yaş çocuklar: yarı ücret']},
+ en:{n:'Boat Tour',loc:'Fethiye Bays · 10:30-17:00 (6+ hours)',f:['6 Bays','Lunch Included','Family Friendly'],
+  desc:'⚓ Route: Butterfly Valley, Cold Water Bay, St. Nicholas Island, Darboğaz, Aquarium Bay, Camel Beach. Swimming breaks in 6 bays with relaxing music and a family-friendly atmosphere.',
+  inc:['Hotel transfer','Insurance','Lunch'],exc:['Bar','Drinks'],
+  info:['Meeting point: Ölüdeniz Beach','Suitable for all ages (incl. babies)','Duration: 10:30 - 17:00','Languages: TR / EN'],
+  reg:['Fethiye Center','Hisarönü','Çalış','Ölüdeniz'],bring:['Swimsuit','Towel','Sunscreen','Hat'],ban:['Outside food and drinks'],
+  extra:['Babies 0-2: free','Children 2-5: half price']}},
+
+{img:'fb489335d7c59aad.webp',p:'3.000 ₺',dep:'1.000 ₺',tag:{tr:'Yeni',en:'New'},
+ tr:{n:'Rafting Turu',loc:'Dalaman Çayı · 7 saat',f:['16 Km Parkur','Yemekler Dahil','Rehberli'],
+  desc:"🌊 Dalaman Çayı'nın serin sularında 16 kilometrelik bir heyecan fırtınasına davetlisiniz. Hiçbir deneyim gerekmeden, uzman rehberlerimiz eşliğinde dev dalgalara karşı kürek çekmeye hazır olun!",
+  inc:['Otel transferi','Sigorta','Kahvaltı','Öğle yemeği','Rehber'],exc:['Kantin','Kişisel harcamalar','Fotoğraf & video'],
+  info:['Buluşma: Konumunuzdan alınış','Minimum yaş: 13','Yüzme bilmek önerilir','Güvenlik ekipmanları tur öncesi verilir, rehberler bilgilendirme yapar','Diller: TR / EN'],
+  reg:['Fethiye Merkez','Ölüdeniz','Ovacık','Çalış'],bring:['Güneş kremi','Spor / su ayakkabısı','Yedek kıyafet','Şort, mayo, havlu','Şapka'],ban:['Hamile misafirler','Kalp rahatsızlığı olanlar','Alkol']},
+ en:{n:'Rafting Tour',loc:'Dalaman River · 7 hours',f:['16 Km Course','Meals Included','Guided'],
+  desc:'🌊 A 16-kilometer storm of excitement in the cool waters of the Dalaman River. No experience needed — get ready to paddle against giant waves with our expert guides!',
+  inc:['Hotel transfer','Insurance','Breakfast','Lunch','Guide'],exc:['Canteen','Personal expenses','Photos & video'],
+  info:['Meeting: pickup from your location','Minimum age: 13','Swimming skills recommended','Safety equipment provided with full briefing','Languages: TR / EN'],
+  reg:['Fethiye Center','Ölüdeniz','Ovacık','Çalış'],bring:['Sunscreen','Sport / water shoes','Spare clothes','Shorts, swimsuit, towel','Hat'],ban:['Pregnant guests','Guests with heart conditions','Alcohol']}},
+
+{img:'b353e87d436fdd73.webp',p:'1.750 ₺',dep:'500 ₺',tag:{tr:'Yeni',en:'New'},
+ tr:{n:'At Safari Turu',loc:'Fethiye Yanıklar · 3 saat',f:['Tecrübe Gerekmez','Doğa','Rehberli'],
+  desc:'Doğanın kalbinde bir yolculuk 🏇 Çam kokulu Yanıklar ormanlarında, son derece uysal ve eğitimli atlarımızla orman patikalarında ilerliyoruz. Tur öncesi kısa temel eğitim verilir — daha önce ata binmiş olmanıza gerek yok.',
+  inc:['Tur rehberi','Otel transferi','Sigorta'],exc:['Yemek','İçecekler','Fotoğraf ve video'],
+  info:['Buluşma: Konumunuzdan alınış','Minimum yaş: 7','Yeni başlayanlara uygun','Diller: TR / EN'],
+  reg:['Fethiye','Hisarönü','Çalış','Ölüdeniz'],bring:['Uzun pantolon veya tayt (eyer tahrişine karşı)','Kapalı, rahat spor ayakkabı','Güneş kremi ve gözlük'],ban:['Alkol']},
+ en:{n:'Horse Safari Tour',loc:'Fethiye Yanıklar · 3 hours',f:['No Experience Needed','Nature','Guided'],
+  desc:'A journey into the heart of nature 🏇 Ride our gentle, well-trained horses along forest trails in the pine-scented Yanıklar woods. A short basic training is given before the tour — no riding experience needed.',
+  inc:['Tour guide','Hotel transfer','Insurance'],exc:['Food','Drinks','Photos and video'],
+  info:['Meeting: pickup from your location','Minimum age: 7','Beginner friendly','Languages: TR / EN'],
+  reg:['Fethiye','Hisarönü','Çalış','Ölüdeniz'],bring:['Long pants or leggings (against saddle chafing)','Closed comfortable shoes','Sunscreen and sunglasses'],ban:['Alcohol']}},
+
+{img:'03a371224d202384.webp',p:'1.500 ₺',dep:'1.000 ₺',tag:{tr:'Yeni',en:'New'},
+ tr:{n:'Jeep Safari',loc:'Fethiye/Saklıkent · 7 saat',f:['Saklıkent Kanyonu','Su Savaşları','Öğle Yemeği'],
+  desc:'Sadece bir gezi değil; adrenalin, takım ruhu ve doğayla iç içe geçen tam günlük bir eğlence! Su savaşları, çamur banyosu, Saklıkent Kanyonu ve Yakapark tek günde.',
+  inc:['Tur rehberi','Sigorta','Otel transferi','Öğle yemeği'],exc:['Kişisel harcamalar','Fotoğraf ve video çekimleri'],
+  info:['Buluşma: Konumunuzdan alınış','Minimum yaş: 6','Su savaşları yapılır — elektronik eşyalarınızı koruyun','Rahat kıyafet önerilir','Diller: TR / EN'],
+  prog:[['07:00-08:00 Alınış','Servis araçlarımız sizi otelinizden alır.'],['Brifing','Aktivite bölgesinde kısa mola ve bilgilendirme.'],['Su Savaşı','Jeepler yan yana gelince su tabancaları ateşlenir!'],['Çamur Banyosu','Doğal peeling — cildiniz ipek gibi olacak.'],['Öğle Yemeği','Izgara alabalık veya tavuk şiş + açık büfe mezeler.'],['Saklıkent Kanyonu','Dağlardan gelen buz gibi kar suları ile zindelik.'],['Yakapark','Buz gibi su kanalları ve meşhur soğuk havuz meydan okuması.'],['Dönüş','Gün boyu çekilen komik fotoğraflarla keyifli dönüş yolculuğu.']],
+  reg:['Fethiye','Ölüdeniz','Ovacık','Çalış'],bring:['Güneş kremi','Şapka','Havlu','Yedek kıyafet','Rahat ayakkabı'],ban:['Hamile misafirler']},
+ en:{n:'Jeep Safari',loc:'Fethiye/Saklıkent · 7 hours',f:['Saklıkent Canyon','Water Fights','Lunch Included'],
+  desc:'Not just a trip — a full day of adrenaline, team spirit and fun in nature! Water fights, mud bath, Saklıkent Canyon and Yakapark all in one day.',
+  inc:['Tour guide','Insurance','Hotel transfer','Lunch'],exc:['Personal expenses','Photos and video'],
+  info:['Meeting: pickup from your location','Minimum age: 6','Water fights happen — protect your electronics','Comfortable clothes recommended','Languages: TR / EN'],
+  prog:[['07:00-08:00 Pickup','Our shuttle picks you up from your hotel.'],['Briefing','Short break and orientation at the activity area.'],['Water Fight','When the jeeps line up, the water guns fire!'],['Mud Bath','Natural peeling — your skin will feel silky.'],['Lunch','Grilled trout or chicken skewers + open buffet.'],['Saklıkent Canyon','Refreshing ice-cold snowmelt waters from the mountains.'],['Yakapark','Icy water channels and the famous cold-pool challenge.'],['Return','A fun ride back with the day\'s funny photos.']],
+  reg:['Fethiye','Ölüdeniz','Ovacık','Çalış'],bring:['Sunscreen','Hat','Towel','Spare clothes','Comfortable shoes'],ban:['Pregnant guests']}},
+
+{img:'2ac46d33b5eb8d45.webp',p:'2.000 ₺',dep:'1.000 ₺',tag:{tr:'Yeni',en:'New'},
+ tr:{n:'ATV Turu',loc:'Fethiye Kayaköy · 60 dk sürüş',f:['60 Dk Sürüş','Transfer','Sigorta'],
+  desc:'Toz, çamur ve adrenalin! Altınızdaki güçlü makineyle dar patikaları aşmak, engebeli arazide dengede kalmak ve gaza bastığınızda motorun kükreyişini duymak gerçek bir özgürlük hissidir.',
+  inc:['Otel transferi','Sigorta'],exc:['Fotoğraf ve video'],
+  info:['Buluşma: Konumunuzdan alınış','Sürücü için minimum yaş: 16 (küçükler artçı olarak katılabilir)','Ehliyet gerekmez','Diller: TR / EN'],
+  prog:[['Eğitim','15 dk: gaz-fren mekanizması, dönüşler ve konvoy disiplini.'],['Hazırlık','Kask ve gözlük kontrolü — macera başlıyor!'],['Isınma Sürüşü','İlk kilometreler düz yolda, araçla bütünleşin.'],['Toz Maskeleri','Bandananızı takın, toz bulutu geliyor!'],['Vahşi Doğa','Orman yolları ve kayalık patikalarda özgürlük.']],
+  reg:['Ölüdeniz','Fethiye Merkez','Hisarönü','Çalış'],bring:['Spor kıyafet','Güneş gözlüğü'],ban:['Alkollü katılım'],extra:['2 kişi tek araç: +500 ₺']},
+ en:{n:'ATV Tour',loc:'Fethiye Kayaköy · 60 min ride',f:['60 Min Ride','Transfer','Insurance'],
+  desc:'Dust, mud and adrenaline! Conquering narrow trails on a powerful machine, keeping balance on rough terrain and hearing the engine roar when you hit the gas — that is real freedom.',
+  inc:['Hotel transfer','Insurance'],exc:['Photos and video'],
+  info:['Meeting: pickup from your location','Minimum driver age: 16 (younger guests can ride as passengers)','No driving license required','Languages: TR / EN'],
+  prog:[['Training','15 min: throttle, brakes, turns and convoy discipline.'],['Preparation','Helmet and goggles check — the adventure begins!'],['Warm-up Ride','First kilometers on flat roads to get comfortable.'],['Dust Masks','Put on your bandana, the dust cloud is coming!'],['Wild Nature','Freedom on forest roads and rocky trails.']],
+  reg:['Ölüdeniz','Fethiye Center','Hisarönü','Çalış'],bring:['Sport clothes','Sunglasses'],ban:['Participation under the influence of alcohol'],extra:['2 people on one vehicle: +500 TL']}},
+
+{img:'9d690a429b03b7db.webp',p:'8.000 ₺',dep:'500 ₺',tag:{tr:'Yeni',en:'New'},
+ tr:{n:'Sürat Teknesi',loc:'Fethiye/Ölüdeniz · 2 saat',f:['Özel Tekne','Özel Kaptan','2 Rota'],
+  desc:'Kalabalıktan uzak, sadece size özel bir macera. Sürat teknesi turları ile Fethiye/Ölüdeniz koylarında adrenalin dolu, prestijli bir yolculuğa hazır olun. Mavi bayraklı koylara kısa sürede ulaşın.',
+  inc:['Özel kaptan','Sigorta'],exc:['Yiyecek','İçecekler'],
+  info:['Buluşma: Ölüdeniz Sahil','Her yaşa uygun','2 rota seçeneği: Darboğaz veya Kelebekler Vadisi','Diller: TR / EN'],
+  bring:['Güneş kremi','Şort, mayo','Havlu'],extra:['Kadın Kaptan: +2.000 ₺']},
+ en:{n:'Speed Boat',loc:'Fethiye/Ölüdeniz · 2 hours',f:['Private Boat','Private Captain','2 Routes'],
+  desc:'A private adventure away from the crowds. Get ready for an adrenaline-filled, prestigious journey through the bays of Fethiye/Ölüdeniz. Reach blue-flag bays in no time.',
+  inc:['Private captain','Insurance'],exc:['Food','Drinks'],
+  info:['Meeting point: Ölüdeniz Beach','Suitable for all ages','2 route options: Darboğaz or Butterfly Valley','Languages: TR / EN'],
+  bring:['Sunscreen','Shorts, swimsuit','Towel'],extra:['Female Captain: +2,000 TL']}}
+];
+const T = [
+{img:'167f9cea0fe905cf.webp',p:'4.000 ₺',dep:'1.000 ₺',pv:1,tag:{tr:'VIP',en:'VIP'},
+ tr:{n:'VIP Transfer · Fethiye / Ölüdeniz',loc:'Dalaman Havalimanı ↔ Fethiye/Ölüdeniz',f:['Mercedes Vito','Paylaşımsız','7/24'],
+  desc:"Dalaman Havalimanı'ndan kapınıza kadar kusursuz ulaşım. Size özel tahsis edilen paylaşımsız VIP araçlarla, uçuşunuzu anlık takip ediyor, sizi havalimanı çıkışında isminizle karşılıyoruz.",
+  inc:['Özel araç ve profesyonel şoför','Uçuş takibi — rötarda ek ücret yok','İsimle karşılama ve bagaj yardımı','Ücretsiz çocuk koltuğu (talep üzerine)'],exc:['Yemek','İçecek'],
+  info:['Güzergah: Dalaman Havalimanı (DLM) ↔ Fethiye, Ölüdeniz, Hisarönü','7 gün 24 saat hizmet','Paylaşımsız — araç sadece size özel','Diller: TR / EN']},
+ en:{n:'VIP Transfer · Fethiye / Ölüdeniz',loc:'Dalaman Airport ↔ Fethiye/Ölüdeniz',f:['Mercedes Vito','Private','24/7'],
+  desc:'Flawless transportation from Dalaman Airport to your door. In your own private VIP vehicle, we track your flight in real time and greet you by name at the airport exit.',
+  inc:['Private vehicle and professional driver','Flight tracking — no extra charge for delays','Name greeting and luggage assistance','Free child seat (on request)'],exc:['Food','Drinks'],
+  info:['Route: Dalaman Airport (DLM) ↔ Fethiye, Ölüdeniz, Hisarönü','24/7 service','Private — the vehicle is yours only','Languages: TR / EN']}},
+
+{img:'167f9cea0fe905cf.webp',p:'5.000 ₺',dep:'1.000 ₺',pv:1,tag:{tr:'VIP',en:'VIP'},
+ tr:{n:'VIP Transfer · Marmaris',loc:'Dalaman Havalimanı ↔ Marmaris · ~1,5 saat',f:['Mercedes Vito','Paylaşımsız','7/24'],
+  desc:"Dalaman Havalimanı'ndan Marmaris'teki otelinize kadar konforlu ve paylaşımsız VIP transfer. Uçuşunuzu anlık takip ediyor, sizi terminal çıkışında isminizle karşılıyor ve kapınıza kadar bırakıyoruz.",
+  inc:['Özel araç ve profesyonel şoför','Uçuş takibi — rötarda ek ücret yok','İsimle karşılama ve bagaj yardımı','Ücretsiz çocuk koltuğu (talep üzerine)'],exc:['Yemek','İçecek'],
+  info:['Güzergah: Dalaman Havalimanı (DLM) ↔ Marmaris','Yolculuk süresi: yaklaşık 1,5 saat','7 gün 24 saat hizmet','Paylaşımsız — araç sadece size özel','Diller: TR / EN'],
+  reg:['Marmaris Merkez','İçmeler','Armutalan','Siteler']},
+ en:{n:'VIP Transfer · Marmaris',loc:'Dalaman Airport ↔ Marmaris · ~1.5 hours',f:['Mercedes Vito','Private','24/7'],
+  desc:'Comfortable, private VIP transfer from Dalaman Airport to your hotel in Marmaris. We track your flight in real time, greet you by name at the terminal exit and drop you at your door.',
+  inc:['Private vehicle and professional driver','Flight tracking — no extra charge for delays','Name greeting and luggage assistance','Free child seat (on request)'],exc:['Food','Drinks'],
+  info:['Route: Dalaman Airport (DLM) ↔ Marmaris','Travel time: about 1.5 hours','24/7 service','Private — the vehicle is yours only','Languages: TR / EN'],
+  reg:['Marmaris Center','İçmeler','Armutalan','Siteler']}}
+];
+const R = [
+{img:'https://images.unsplash.com/photo-1587580945215-5d4aabb2c8ef?auto=format&fit=crop&w=900&q=70',p:null,u:'d',tag:{tr:'Kiralık',en:'Rental'},
+ tr:{n:'Araba Kiralama',loc:'Ölüdeniz · Fethiye · Dalaman Havalimanı teslim',f:['Ekonomik → SUV','Otele teslim','Sigortalı'],
+  desc:"Bölgeyi kendi temponuzda keşfedin. Ekonomik sınıftan SUV ve 7-9 kişilik araçlara kadar geniş seçenek; aracı otelinize ya da Dalaman Havalimanı'na teslim ediyoruz. Kayaköy, Saklıkent, Kelebekler Vadisi ve Likya koyları elinizin altında.",
+  inc:['Kasko ve trafik sigortası','Sınırsız kilometre (günlük kiralamalarda)','Otele teslim ve otelden alım (Ölüdeniz, Hisarönü, Ovacık, Fethiye)','7/24 yol yardımı'],exc:['Yakıt','Köprü/otoyol geçişleri','Trafik cezaları'],
+  info:['Sürücü yaşı en az 21, ehliyet en az 2 yıllık','Pasaport / kimlik ve geçerli ehliyet gerekli','Otomatik ve manuel vites seçenekleri','Havalimanı teslimi ek ücrete tabi olabilir',"Fiyat sezon ve araç sınıfına göre değişir — WhatsApp'tan teklif alın"],
+  bring:['Ehliyet','Pasaport / kimlik','Kredi kartı (depozito için)']},
+ en:{n:'Car Rental',loc:'Ölüdeniz · Fethiye · Dalaman Airport delivery',f:['Economy → SUV','Hotel delivery','Insured'],
+  desc:'Explore the region at your own pace. From economy cars to SUVs and 7-9 seat vans; we deliver to your hotel or Dalaman Airport. Kayaköy, Saklıkent, Butterfly Valley and the Lycian bays are all within reach.',
+  inc:['Comprehensive & third-party insurance','Unlimited mileage (daily rentals)','Hotel delivery & pickup (Ölüdeniz, Hisarönü, Ovacık, Fethiye)','24/7 roadside assistance'],exc:['Fuel','Toll fees','Traffic fines'],
+  info:['Driver at least 21, licence held 2+ years','Passport / ID and valid driving licence required','Automatic and manual options','Airport delivery may cost extra','Price depends on season and car class — get a quote on WhatsApp'],
+  bring:['Driving licence','Passport / ID','Credit card (for deposit)']}},
+
+{img:'https://images.unsplash.com/photo-1565300480288-deb407e6ae15?auto=format&fit=crop&w=900&q=70',p:null,u:'d',tag:{tr:'Kiralık',en:'Rental'},
+ tr:{n:'Motosiklet & Scooter Kiralama',loc:'Ölüdeniz · Hisarönü · Fethiye',f:['50cc – 125cc+','Kask dahil','Otele teslim'],
+  desc:'Dar koy yollarında ve sahil boyunca en pratik ulaşım. Scooter ve motosikletlerimizi kask ile birlikte otelinize teslim ediyoruz; Ölüdeniz – Hisarönü – Fethiye arasında park derdi olmadan özgürce dolaşın.',
+  inc:['Kask (sürücü ve yolcu)','Trafik sigortası','Otele teslim ve alım','Yol yardımı'],exc:['Yakıt','Trafik cezaları','Hasar muafiyeti dışı hasarlar'],
+  info:['50cc için B veya A1 ehliyet; 125cc ve üzeri için A1/A2/A sınıfı ehliyet gerekir','Sürücü yaşı en az 18','Günlük ve haftalık kiralama',"Fiyat model ve süreye göre değişir — WhatsApp'tan teklif alın"],
+  bring:['Ehliyet','Pasaport / kimlik','Depozito']},
+ en:{n:'Motorbike & Scooter Rental',loc:'Ölüdeniz · Hisarönü · Fethiye',f:['50cc – 125cc+','Helmet incl.','Hotel delivery'],
+  desc:'The easiest way around narrow bay roads and along the coast. We deliver scooters and motorbikes with helmets to your hotel — ride freely between Ölüdeniz, Hisarönü and Fethiye with no parking hassle.',
+  inc:['Helmets (rider & passenger)','Third-party insurance','Hotel delivery & pickup','Roadside assistance'],exc:['Fuel','Traffic fines','Damage beyond the excess'],
+  info:['50cc requires a B or A1 licence; 125cc+ requires an A1/A2/A licence','Rider at least 18','Daily and weekly rental','Price depends on model and duration — get a quote on WhatsApp'],
+  bring:['Driving licence','Passport / ID','Deposit']}},
+
+{img:'https://images.unsplash.com/photo-1549221279-aca391fb56d0?auto=format&fit=crop&w=900&q=70',p:null,u:'d',tag:{tr:'Kiralık',en:'Rental'},
+ tr:{n:'ATV Kiralama',loc:'Ölüdeniz · Hisarönü · Kayaköy',f:['Saatlik / Günlük','Kask dahil','Sigortalı'],
+  desc:"Rehberli tur yerine kendi rotanızı mı çizmek istiyorsunuz? Yola uygun, plakalı ATV'lerimizi saatlik veya günlük kiralayın; Kayaköy, Gemiler Koyu ve Babadağ eteklerinde özgürce sürün.",
+  inc:['Kask','Trafik sigortası','Kısa kullanım eğitimi','Otele teslim (bölge içi)'],exc:['Yakıt','Trafik cezaları','Fotoğraf ve video'],
+  info:['Plakalı, trafiğe çıkabilen ATV','Sürücü için B sınıfı ehliyet gerekir','Sürücü yaşı en az 18','Rehberli ATV turu için Aktiviteler bölümüne bakın',"Fiyat süreye göre değişir — WhatsApp'tan teklif alın"],
+  bring:['Ehliyet','Kapalı ayakkabı','Güneş gözlüğü']},
+ en:{n:'ATV Rental',loc:'Ölüdeniz · Hisarönü · Kayaköy',f:['Hourly / Daily','Helmet incl.','Insured'],
+  desc:'Rather plan your own route than join a guided tour? Rent our road-legal, registered ATVs by the hour or the day and ride freely around Kayaköy, Gemiler Bay and the foothills of Babadağ.',
+  inc:['Helmet','Third-party insurance','Short handling briefing','Hotel delivery (local area)'],exc:['Fuel','Traffic fines','Photos and video'],
+  info:['Registered, road-legal ATV','Driver needs a category B licence','Driver at least 18','For a guided ATV tour see the Activities section','Price depends on duration — get a quote on WhatsApp'],
+  bring:['Driving licence','Closed shoes','Sunglasses']}}
+];
+const H = [
+{img:'https://images.unsplash.com/photo-1569660072562-48a035e65c30?auto=format&fit=crop&w=900&q=70',p:null,u:'n',tag:{tr:'Havuzlu',en:'Private Pool'},
+ tr:{n:'Havuzlu Villa Kiralama',loc:'Ölüdeniz · Hisarönü · Ovacık · Kayaköy',f:['Özel havuz','2–6 yatak odası','Muhafazakâr seçenek'],
+  desc:"Ailenize ya da arkadaş grubunuza özel, havuzlu villalar. Deniz veya Babadağ manzaralı, tam donanımlı mutfaklı villalar Ölüdeniz plajına ve Hisarönü merkezine kısa mesafede. Bütçenize ve kişi sayınıza uygun villayı WhatsApp'tan önerelim.",
+  inc:['Özel havuz','Tam donanımlı mutfak','Klima ve Wi-Fi','Havlu ve nevresim','Giriş temizliği'],exc:['Havalimanı transferi (ayrıca eklenebilir)','Ekstra temizlik','Yemek'],
+  info:['Minimum konaklama sezona göre 3–7 gece','Giriş 16:00 · Çıkış 10:00','Hasar depozitosu alınabilir','Muhafazakâr (korunaklı havuzlu) villa seçenekleri mevcuttur',"Fiyat villa, tarih ve kişi sayısına göre değişir — WhatsApp'tan teklif alın"],
+  extra:['VIP havalimanı transferi','Araç kiralama','Aktivite ve tur paketleri']},
+ en:{n:'Private Pool Villa Rental',loc:'Ölüdeniz · Hisarönü · Ovacık · Kayaköy',f:['Private pool','2–6 bedrooms','Secluded options'],
+  desc:"Private-pool villas for your family or group of friends. Sea or Babadağ views, fully equipped kitchens, a short ride from Ölüdeniz beach and Hisarönü centre. Tell us your budget and group size on WhatsApp and we'll suggest the right villa.",
+  inc:['Private pool','Fully equipped kitchen','Air conditioning & Wi-Fi','Towels & bed linen','Check-in cleaning'],exc:['Airport transfer (can be added)','Extra cleaning','Meals'],
+  info:['Minimum stay 3–7 nights depending on season','Check-in 16:00 · Check-out 10:00','A damage deposit may apply','Secluded (privacy-screened pool) villas available','Price depends on villa, dates and group size — get a quote on WhatsApp'],
+  extra:['VIP airport transfer','Car rental','Activity & tour packages']}},
+
+{img:'https://images.unsplash.com/photo-1613914153139-79eafdf15d23?auto=format&fit=crop&w=900&q=70',p:null,u:'n',tag:{tr:'Günlük',en:'Daily'},
+ tr:{n:'Günlük Kiralık Ev & Daire',loc:'Ölüdeniz · Hisarönü · Fethiye merkez',f:['Günlük / haftalık','1+1 → 3+1','Mutfaklı'],
+  desc:"Otel yerine kendi evinizde gibi konaklayın. Kısa süreli kalışlar için 1+1'den 3+1'e mutfaklı, klimalı günlük kiralık ev ve daireler; plaja, çarşıya ve aktivite noktalarına yakın konumlarda.",
+  inc:['Mutfak ve temel mutfak eşyaları','Klima ve Wi-Fi','Havlu ve nevresim','Giriş temizliği'],exc:['Havalimanı transferi (ayrıca eklenebilir)','Ekstra temizlik'],
+  info:['Kısa süreli (günlük) kiralama — minimum gece sayısı daireye göre değişir','Giriş 14:00 · Çıkış 11:00','Kimlik / pasaport bildirimi zorunludur',"Fiyat daire, tarih ve kişi sayısına göre değişir — WhatsApp'tan teklif alın"],
+  extra:['VIP havalimanı transferi','Araç / scooter kiralama','Aktivite ve tur paketleri']},
+ en:{n:'Holiday Homes & Apartments',loc:'Ölüdeniz · Hisarönü · Fethiye centre',f:['Daily / weekly','1 → 3 bedrooms','Kitchen'],
+  desc:'Stay like at home instead of a hotel. Air-conditioned homes and apartments with kitchens, from 1 to 3 bedrooms, for short stays — close to the beach, the bazaar and activity points.',
+  inc:['Kitchen and basic kitchenware','Air conditioning & Wi-Fi','Towels & bed linen','Check-in cleaning'],exc:['Airport transfer (can be added)','Extra cleaning'],
+  info:['Short-term (daily) rental — minimum nights vary by property','Check-in 14:00 · Check-out 11:00','ID / passport registration is mandatory','Price depends on property, dates and group size — get a quote on WhatsApp'],
+  extra:['VIP airport transfer','Car / scooter rental','Activity & tour packages']}}
+];
+const P = [
+{img:'a4e8e54a20ec34b2.webp',p:'9.025 ₺',dep:'1.000 ₺',
+ tr:{n:'Uç & Dal',loc:'Ölüdeniz · Yarım gün · 2 aktivite',f:['Yamaç Paraşütü','Tüplü Dalış','Ücretsiz Transfer','Sigorta'],
+  desc:"Güne gökyüzünde başlayın: sabah transferle Babadağ'a çıkıp Ölüdeniz'in eşsiz manzarasına karşı yamaç paraşütü heyecanını yaşayın (yaklaşık 30 dk uçuş). Öğleden sonra ise tecrübeli dalgıçlar rehberliğinde tüplü dalış — toplam 45 dk, bunun 25 dakikası su altında.",
+  inc:['Fotoğraf & Video (GoPro ile, telefonunuza aktarılır)','Otel transferi (Fethiye, Ölüdeniz, Hisarönü, Ovacık)','Tam kapsamlı sigorta','Aynı gün 2 aktivite'],
+  exc:['Kadın Pilot (özel talep)','Gün Batımı uçuşu (fiyat farkı)','Ekstra Akrobasi'],
+  info:['08:30 — Yamaç Paraşütü','13:00 — Tüplü Dalış','Kilo limiti: Kadın 80 kg, Erkek 100 kg','Uçuş yüksekliği: 1965 m','Lütfen aktivitelere alkolsüz katılın'],
+  reg:['Fethiye','Ovacık','Ölüdeniz'],bring:['Spor ayakkabı','Güneş gözlüğü','Mayo, havlu'],ban:['Terlik','Özel kameranız ile çekim']},
+ en:{n:'Fly & Dive',loc:'Ölüdeniz · Half day · 2 activities',f:['Paragliding','Scuba Diving','Free Transfer','Insurance'],
+  desc:'Start the day in the sky: morning transfer to Babadağ for a paragliding flight over the stunning Blue Lagoon (approx. 30 min). In the afternoon, scuba diving with experienced divers — 45 min total, 25 of them underwater.',
+  inc:['Photos & Video (GoPro, transferred to your phone)','Hotel transfer (Fethiye, Ölüdeniz, Hisarönü, Ovacık)','Full insurance','2 activities in one day'],
+  exc:['Female Pilot (special request)','Sunset flight (price difference)','Extra Acrobatics'],
+  info:['08:30 — Paragliding','13:00 — Scuba Diving','Weight limit: Women 80 kg, Men 100 kg','Flight altitude: 1965 m','Please join activities sober'],
+  reg:['Fethiye','Ovacık','Ölüdeniz'],bring:['Sport shoes','Sunglasses','Swimsuit, towel'],ban:['Flip-flops','Filming with your own camera']}},
+
+{img:'c4406e275e90a016.webp',p:'7.838 ₺',old:'8.250 ₺',dep:'1.000 ₺',
+ tr:{n:'Sür & Uç',loc:'Aynı gün · 2 aktivite',f:['At Safari','Yamaç Paraşütü','Transfer','Rehber','Sigorta'],
+  desc:"Göklerin ve toprağın efsanesi: bir yanda Babadağ'ın zirvesinden süzülen bir kanat, diğer yanda doğanın kalbinde sadık bir dost... Bu paket, adrenalini huzurla, modern macerayı kadim bir gelenekle harmanlıyor.",
+  inc:['Tur rehberi','Otel transferi','Sigorta','Paraşüt eğitmeni'],exc:['Yemek','İçecekler','Fotoğraf ve video (at safari)'],
+  info:['08:30 — At Safari Turu (Yanıklar)','15:00 — Yamaç Paraşütü','Ata binme tecrübesi gerekmez','Lütfen aktivitelere alkolsüz katılın'],
+  reg:['Fethiye','Hisarönü','Çalış','Ölüdeniz'],bring:['Uzun pantolon veya tayt','Kapalı spor ayakkabı','Güneş kremi ve gözlük'],ban:['Alkol']},
+ en:{n:'Ride & Fly',loc:'Same day · 2 activities',f:['Horse Safari','Paragliding','Transfer','Guide','Insurance'],
+  desc:'The legend of sky and earth: a wing gliding from the summit of Babadağ on one side, a loyal friend in the heart of nature on the other... This package blends adrenaline with serenity, modern adventure with ancient tradition.',
+  inc:['Tour guide','Hotel transfer','Insurance','Paragliding instructor'],exc:['Food','Drinks','Photos and video (horse safari)'],
+  info:['08:30 — Horse Safari Tour (Yanıklar)','15:00 — Paragliding','No riding experience needed','Please join activities sober'],
+  reg:['Fethiye','Hisarönü','Çalış','Ölüdeniz'],bring:['Long pants or leggings','Closed sport shoes','Sunscreen and sunglasses'],ban:['Alcohol']}},
+
+{img:'f63b53edb1785554.webp',p:'9.975 ₺',old:'10.250 ₺',dep:'2.000 ₺',
+ tr:{n:'Uç, Sür & Yüz',loc:'2 gün · 3 aktivite',f:['Yamaç Paraşütü','ATV Turu','Tekne Turu','Transfer','Sigorta'],
+  desc:'Adrenalin dozunu artırıyoruz! Sıkıcı tatil planlarını bir kenara bırakın; uçuşa geçeceğiniz, tozu dumana katacağınız ve suların tadını çıkaracağınız o büyük macera başlıyor. En çok tercih edilen rotalarla donatılmış Macera Paketi sizi bekliyor!',
+  inc:['Fotoğraf & Video (paraşüt, GoPro ile)','Otel transferi','Tam kapsamlı sigorta','3 aktivite, 2 gün'],
+  exc:['Kadın Pilot (özel talep)','Gün Batımı uçuşu (fiyat farkı)','Ekstra Akrobasi'],
+  info:['1. Gün 08:30 — Yamaç Paraşütü','1. Gün 13:00 — ATV Turu','2. Gün 10:30 — Tekne Turu','Kilo limiti: Kadın 80 kg, Erkek 100 kg','Lütfen aktivitelere alkolsüz katılın'],
+  reg:['Fethiye','Ovacık','Ölüdeniz'],bring:['Spor ayakkabı','Güneş gözlüğü','Mayo, havlu, güneş kremi'],ban:['Terlik','Özel kameranız ile çekim']},
+ en:{n:'Fly, Ride & Swim',loc:'2 days · 3 activities',f:['Paragliding','ATV Tour','Boat Tour','Transfer','Insurance'],
+  desc:"We're raising the adrenaline dose! Put boring holiday plans aside; the big adventure begins — you'll take flight, kick up the dust and enjoy the waters. The Adventure Package with the most preferred routes awaits!",
+  inc:['Photos & Video (paragliding, with GoPro)','Hotel transfer','Full insurance','3 activities over 2 days'],
+  exc:['Female Pilot (special request)','Sunset flight (price difference)','Extra Acrobatics'],
+  info:['Day 1, 08:30 — Paragliding','Day 1, 13:00 — ATV Tour','Day 2, 10:30 — Boat Tour','Weight limit: Women 80 kg, Men 100 kg','Please join activities sober'],
+  reg:['Fethiye','Ovacık','Ölüdeniz'],bring:['Sport shoes','Sunglasses','Swimsuit, towel, sunscreen'],ban:['Flip-flops','Filming with your own camera']}}
 ];
 
-const packages = [
- {img:'a4e8e54a20ec34b2.webp', tr:{n:'Uç & Dal',loc:'Ölüdeniz · Yarım gün · 2 aktivite',f:['Yamaç Paraşütü','Tüplü Dalış','Ücretsiz Transfer','Sigorta']}, en:{n:'Fly & Dive',loc:'Ölüdeniz · Half day · 2 activities',f:['Paragliding','Scuba Diving','Free Transfer','Insurance']}, p:'9.025 ₺'},
- {img:'c4406e275e90a016.webp', tr:{n:'Sür & Uç',loc:'Aynı gün · 2 aktivite',f:['At Safari Turu','Yamaç Paraşütü','Ücretsiz Transfer','Rehber','Sigorta']}, en:{n:'Ride & Fly',loc:'Same day · 2 activities',f:['Horse Safari','Paragliding','Free Transfer','Guide','Insurance']}, p:'7.838 ₺'},
- {img:'f63b53edb1785554.webp', tr:{n:'Uç, Sür & Yüz',loc:'2 gün · 3 aktivite',f:['ATV Turu','Yamaç Paraşütü','Tekne Turu','Transfer','Sigorta']}, en:{n:'Fly, Ride & Swim',loc:'2 days · 3 activities',f:['ATV Tour','Paragliding','Boat Tour','Transfer','Insurance']}, p:'9.975 ₺'}
-];
+const FAQ = {
+"Yamaç Paraşütü":{
+ tr:[
+  ["İnerken sert bir iniş mi yapıyoruz?","Hayır, inişler Ölüdeniz sahilindeki çim alana veya kumsala yapılır. Pilotun talimatıyla sadece birkaç adım atarak yumuşak bir şekilde yere basarsınız."],
+  ["Pilotla uçarken konuşabilir miyim?","Tabii ki! Pilotun hemen önünde oturduğunuz için rahatça sohbet edebilir, manzara hakkında bilgi alabilir veya heyecanınızı paylaşabilirsiniz."],
+  ["Yanıma ne almalıyım?","En önemlisi ayağınızdan çıkmayacak bir spor ayakkabı ve güneş gözlüğü. Gökyüzü aşağıdan daha serin olabileceği için ince bir rüzgarlık alabilirsiniz."],
+  ["Korkmalı mıyım? Uçaktan atlar gibi mi hissedeceğim?","Kesinlikle hayır! Boşluğa atlamıyorsunuz; sadece yamaçtan aşağı hafifçe koşuyorsunuz ve kanat sizi yavaşça yukarı kaldırıyor. Düşme hissi yerine kuş gibi süzülme hissi hakimdir."],
+  ["Yaş sınırı var mı?","Alt sınır genellikle 4-5 yaştır. Üst sınır kişinin sağlık durumuna ve pilotun onayına bağlıdır. Kalp rahatsızlığı veya panik atağı olanlar için önerilmez."],
+  ["Uçuş ne kadar sürüyor?","Hava koşullarına bağlı olarak havada kalış süresi ortalama 25-30 dakikadır. Hazırlık ve transferlerle birlikte toplam yaklaşık 2 saat ayırmanız gerekir."],
+  ["Kilo sınırı var mı?","Evet, güvenlik ekipmanları nedeniyle genellikle erkeklerde 100-105 kg, kadınlarda 85-90 kg üst sınır vardır. Boy sınırı genelde 2 metredir."],
+  ["Herhangi bir tecrübe gerekiyor mu?","Hayır. Yanınızda uçan profesyonel pilot her şeyi yönetir. Siz sadece başlangıçta birkaç adım koşarsınız, sonra gökyüzündesiniz!"]],
+ en:[
+  ["Is the landing rough?","No — we land softly on the grass or sand at Ölüdeniz beach. Following your pilot's instructions, you just take a few steps."],
+  ["Can I talk to the pilot during the flight?","Of course! You sit right in front of the pilot, so you can chat, ask about the scenery and share the excitement."],
+  ["What should I bring?","Most importantly, secure sport shoes and sunglasses. The sky can be cooler than the ground, so a light windbreaker is a good idea."],
+  ["Should I be scared? Does it feel like jumping out of a plane?","Absolutely not! You don't jump into a void — you gently jog down a slope and the wing lifts you slowly. It feels like gliding like a bird, not falling."],
+  ["Is there an age limit?","The lower limit is usually 4-5 years. The upper limit depends on health and pilot approval. Not recommended for guests with heart conditions or panic disorder."],
+  ["How long is the flight?","Depending on the weather, 25-30 minutes in the air on average. With preparation and transfers, plan about 2 hours in total."],
+  ["Is there a weight limit?","Yes — due to safety equipment, usually 100-105 kg for men and 85-90 kg for women. Height limit is around 2 m."],
+  ["Do I need any experience?","No. The professional pilot flying with you manages everything. You just run a few steps at takeoff — then you're in the sky!"]]},
+"Tüplü Dalış":{
+ tr:[
+  ["Yamaç paraşütü ve tüplü dalışı aynı gün yapabilir miyim?","Evet. Yarım günlük aktiviteler (yamaç paraşütü, tüplü dalış, ATV, at turu) aynı gün yapılabilir. Öğleden önce bir, öğleden sonra ikinci aktivite olarak planlamanız önerilir. Rafting, jeep safari ve tekne turu tam günlüktür."],
+  ["Çocuklar dalış yapabilir mi?","Fiziksel gelişimi uygun olan ve ekipmanı taşıyabilecek 12 yaş ve üzeri çocuklar, ebeveyn onayı ile katılabilir."],
+  ["Su altında ne kadar kalıyoruz?","Uluslararası keşif dalışı standartlarına göre yaklaşık 20-30 dakika. Bu süre, vücudunuzun su basıncına uyumu ve keyifli bir keşif için en ideal süredir."],
+  ["Dalış ekipmanları hijyenik mi?","Kesinlikle. Tüm ekipmanlar her dalış sonrası uluslararası standartlara uygun dezenfektanlarla temizlenir."],
+  ["Yüzme bilmek gerekiyor mu?","Hayır, deneme dalışları için yüzme bilme zorunluluğu yoktur. Eğitmenlerimiz su altında sizi yönlendirir ve tüm hareketlerinizi kontrol eder."]],
+ en:[
+  ["Can I do paragliding and scuba diving on the same day?","Yes. Half-day activities (paragliding, scuba, ATV, horse tour) can be combined in one day — one in the morning, one in the afternoon. Rafting, jeep safari and the boat tour are full-day."],
+  ["Can children dive?","Children aged 12+ with suitable physical development can join with parental consent."],
+  ["How long do we stay underwater?","About 20-30 minutes, per international discovery-dive standards — ideal for adjusting to water pressure and enjoying the exploration."],
+  ["Is the diving equipment hygienic?","Absolutely. All equipment is disinfected after every dive to international standards."],
+  ["Do I need to know how to swim?","No — discovery dives don't require swimming skills. Our instructors guide and control all your movements underwater."]]},
+"Tekne Turu":{
+ tr:[
+  ["Yüzme bilmeyenler katılabilir mi?","Evet. Yüzme zorunlu değildir; dileyen misafirler teknede güneşlenip manzaranın tadını çıkarabilir. Yüzme molalarında can yelekleri mevcuttur."],
+  ["Öğle yemeğinde ne var?","Öğle yemeği fiyata dahildir ve teknede servis edilir. İçecekler ve bar dahil değildir, tekneden ayrıca alınabilir."],
+  ["Bebek ve çocuklarla gelinir mi?","Kesinlikle — teknemiz aile dostudur. 0-2 yaş bebekler ücretsiz, 2-5 yaş çocuklar yarı ücretlidir."],
+  ["Hangi koylara gidiyoruz?","Kelebekler Vadisi, Soğuk Su Koyu, St. Nicholas Adası, Darboğaz, Akvaryum Koyu ve Deve Plajı — toplam 6 durakta yüzme ve fotoğraf molaları veriyoruz."],
+  ["Tur ne kadar sürüyor?","10:30'da kalkıp yaklaşık 17:00'de dönüyoruz — 6 saatten fazla deniz keyfi."],
+  ["Yanıma ne almalıyım?","Mayo, havlu, güneş kremi ve şapka yeterli. Dışarıdan yiyecek-içecek getirilmesine izin verilmez."]],
+ en:[
+  ["Can non-swimmers join?","Yes. Swimming is optional — you can simply sunbathe on deck and enjoy the views. Life jackets are available during swimming breaks."],
+  ["What's for lunch?","Lunch is included and served on board. Drinks and the bar are not included and can be purchased separately."],
+  ["Can we come with babies and kids?","Absolutely — the boat is family friendly. Babies 0-2 travel free, children 2-5 at half price."],
+  ["Which bays do we visit?","Butterfly Valley, Cold Water Bay, St. Nicholas Island, Darboğaz, Aquarium Bay and Camel Beach — swimming and photo breaks at 6 stops."],
+  ["How long is the tour?","We depart at 10:30 and return around 17:00 — more than 6 hours at sea."],
+  ["What should I bring?","Swimsuit, towel, sunscreen and a hat are enough. Outside food and drinks are not allowed."]]},
+"Rafting Turu":{
+ tr:[
+  ["Yanımda ne getirmeliyim?","Islanacak bir mayo/şort, ayağınızdan çıkmayacak bir deniz ayakkabısı (yoksa kiralayabilirsiniz) ve en önemlisi aktivite sonrası giyeceğiniz kuru yedek kıyafetler."],
+  ["Transfer ve yemek için ekstra ödeme yapacak mıyım?","Hayır, her şey dahil! Otel transferi, sabah nehir kenarında köy kahvaltısı ve tur sonundaki öğle yemeği pakete dahildir."],
+  ["Yaş sınırı ve katılım koşulları neler?","Heyecan dolu dalgalar nedeniyle alt yaş sınırı 13'tür. Ciddi sağlık sorunu olmayan herkes katılabilir."],
+  ["Yüzme bilmem şart mı?","Profesyonel can yelekleri sayesinde suyun üzerinde kalmak için ekstra çaba gerekmez. Rehberlerin talimatlarını izlemeniz yeterli."],
+  ["Güvende miyim?","Kesinlikle. Her botta dünya standartlarında eğitim almış bir nehir rehberi bulunur; kask ve can yelekleriyle güvenliğiniz en üst seviyededir."],
+  ["Tur nerede gerçekleşiyor?","Fethiye'ye yaklaşık 1,5 saat mesafede, Türkiye'nin en ünlü parkurlarından Dalaman Çayı üzerinde."]],
+ en:[
+  ["What should I bring?","A swimsuit/shorts that can get wet, water shoes that stay on your feet (rentable if needed) and — most importantly — dry spare clothes for after."],
+  ["Do I pay extra for transfer and meals?","No, it's all inclusive! Hotel transfer, a village breakfast by the river and lunch at the end of the tour are included."],
+  ["Age limit and participation conditions?","Due to the exciting rapids, the minimum age is 13. Anyone without serious health issues can join."],
+  ["Do I have to know how to swim?","Professional life jackets keep you afloat with no extra effort. Just follow your guide's instructions."],
+  ["Am I safe?","Absolutely. Every raft has an internationally trained river guide; helmets and life jackets keep safety at the highest level."],
+  ["Where does the tour take place?","On the Dalaman River, one of Türkiye's most famous courses, about 1.5 hours from Fethiye."]]},
+"At Safari Turu":{
+ tr:[
+  ["Yanımda ne getirmeliyim?","Rahat hareket edebileceğiniz uzun pantolon veya tayt (eyer tahrişine karşı), kapalı rahat spor ayakkabı, güneş kremi ve gözlük."],
+  ["Fotoğraf ve video çekiliyor mu?","Tur boyunca en güzel manzaralarda duraklayarak profesyonel çekimlerinizi yapıyoruz."],
+  ["Yaş ve kilo sınırı var mı?","Güvenliğiniz ve atlarımızın sağlığı için katılım yaşı 7+, maksimum kilo sınırı 95-100 kg'dır."],
+  ["Transfer var mı?","Fethiye, Ölüdeniz, Hisarönü ve Ovacık bölgelerinden ücretsiz transfer mevcuttur. Sizi otelinizden alıp tur sonunda geri bırakıyoruz."]],
+ en:[
+  ["What should I bring?","Long pants or leggings for comfortable riding (against saddle chafing), closed comfortable shoes, sunscreen and sunglasses."],
+  ["Are photos and videos taken?","Yes — we stop at the most scenic spots along the route for professional shots."],
+  ["Is there an age or weight limit?","For your safety and our horses' health: minimum age 7, maximum weight 95-100 kg."],
+  ["Is transfer included?","Free transfer from Fethiye, Ölüdeniz, Hisarönü and Ovacık. We pick you up from your hotel and drop you back after the tour."]]},
+"Jeep Safari":{
+ tr:[
+  ["Tur ne kadar sürüyor?","Sabah 08:30-09:00 gibi başlar, akşam 18:00-18:30 civarında sona erer — tam günlük bir serüven."],
+  ["Hangi bölgeler ziyaret ediliyor?","Fethiye rotasında klasik olarak Tlos Antik Kenti, Yakapark, Saklıkent Kanyonu, Gizlikent Şelalesi ve çamur banyosu durakları bulunur."],
+  ["Jeep Safari güvenli mi?","Evet, araçlar periyodik bakımdan geçer ve şoförler bu parkurlarda deneyimlidir. Araç içinde ayağa kalkmamak ve tutunmak önemlidir."],
+  ["Çocuklar için uygun mu?","Evet, çocuklar için çok eğlencelidir. Çok küçük bebekler için sarsıntı yorucu olabilir; 6 yaş ve üzeri idealdir."],
+  ["Ne giymeliyim?","Çabuk kuruyan şort ve tişört en iyisidir. Ayağınızdan çıkmayacak sandalet veya deniz ayakkabısı seçin; mayonuzu içinize giyin."],
+  ["Öğle yemeği dahil mi?","Evet, öğle yemeği fiyata dahildir. Genellikle alabalık, tavuk veya vejetaryen seçenekler sunulur; içecekler ekstradır."],
+  ["Fotoğraf ve video çekimi yapılıyor mu?","Evet, profesyonel çekim ekibi bulunur. Gün sonunda görüntüleri ek ücretle satın alabilirsiniz."],
+  ["Aynı gün başka aktivite yapılabilir mi?","Önerilmez — tur yaklaşık 10 saat sürer ve yorucudur. Akşamına sakin bir plan yapabilirsiniz."]],
+ en:[
+  ["How long is the tour?","Starts around 08:30-09:00 and ends around 18:00-18:30 — a full-day adventure."],
+  ["Which places are visited?","The classic Fethiye route includes Tlos Ancient City, Yakapark, Saklıkent Canyon, Gizlikent Waterfall and the mud bath."],
+  ["Is it safe?","Yes — vehicles get periodic maintenance and drivers are experienced on these routes. Stay seated and hold on for safety."],
+  ["Is it suitable for children?","Yes, kids love it. The bumps can be tiring for very small babies; ideal for ages 6+."],
+  ["What should I wear?","Quick-dry shorts and t-shirts are best. Pick sandals or water shoes that stay on; wear your swimsuit underneath."],
+  ["Is lunch included?","Yes — usually grilled trout, chicken or vegetarian options; drinks are extra."],
+  ["Are photos and videos taken?","Yes, a professional team shoots during the tour. You can buy the footage at the end for an extra fee."],
+  ["Can I do another activity the same day?","Not recommended — the tour takes about 10 hours and is physically tiring. Plan something calm for the evening."]]},
+"ATV Turu":{
+ tr:[
+  ["Sağlık durumu önemli mi?","Özel bir sağlık durumunuz (bel fıtığı, hamilelik vb.) varsa mutlaka tur öncesi belirtin."],
+  ["Turda hız sınırı var mı?","Evet, bu bir yarış değil konvoy turudur. Rehberin belirlediği hıza ve takip mesafesine uyulması gerekir."],
+  ["Gözlük takmak zorunda mıyım?","Kesinlikle! Tozdan ve küçük taşlardan korunmak için güneş gözlüğü veya verilen koruyucu gözlük takılmalıdır."],
+  ["Çocuklar binebilir mi?","12-14 yaş üstü çocuklar ebeveynlerinin arkasında yolcu olarak binebilir. Kendi başına sürmek için 16 yaş sınırı vardır."],
+  ["Yağmurlu havada tur iptal olur mu?","Aksine, yağmur macerayı ikiye katlar! Çamur artar, adrenalin tavan yapar. Güvenliği tehdit etmediği sürece tur devam eder."],
+  ["Yanıma çanta alabilir miyim?","Büyük sırt çantaları dengeyi bozabilir; küçük bel çantası idealdir. Değerli eşyalarınızı ofisteki kilitli dolaplara bırakabilirsiniz."],
+  ["Çok kirlenir miyim?","\"Çok\" kelimesi az kalır! Toz, toprak ve su birikintileriyle iç içe olacaksınız. En eski kıyafetlerinizi giyin."],
+  ["Ehliyetim yok, sürebilir miyim?","Evet! Turlar trafiğe kapalı orman ve arazi yollarında yapıldığı için ehliyet gerekmez. Kısa bir eğitim yeterli."]],
+ en:[
+  ["Does health condition matter?","If you have a condition (herniated disc, pregnancy, etc.), let us know before the tour."],
+  ["Is there a speed limit?","Yes — this is a convoy tour, not a race. Follow the guide's set speed and spacing."],
+  ["Do I have to wear goggles?","Definitely! Wear sunglasses or the protective goggles provided against dust and small stones."],
+  ["Can children ride?","Kids over 12-14 can ride as passengers behind a parent. Driving solo requires age 16+."],
+  ["Is the tour cancelled in rain?","On the contrary — rain doubles the fun! More mud, more adrenaline. The tour continues unless safety is at risk."],
+  ["Can I bring a bag?","Big backpacks affect balance; a small waist bag is ideal. Valuables can be left in lockers at the office."],
+  ["Will I get dirty?","\"Very\" is an understatement! Dust, dirt and puddles everywhere — wear your oldest clothes."],
+  ["No driving license — can I drive?","Yes! Tours run on closed forest and off-road tracks, so no license is needed. A short training is enough."]]},
+"Sürat Teknesi":{
+ tr:[
+  ["Tekne sadece bize mi özel?","Evet, tekne ve kaptan tamamen size özeldir — başka misafir alınmaz. Rota ve molalar grubunuza göre planlanır."],
+  ["Hangi rotalardan birini seçebilirim?","İki seçenek var: Darboğaz rotası veya Kelebekler Vadisi rotası. Rezervasyon sırasında WhatsApp'tan tercihinizi belirtmeniz yeterli."],
+  ["Kaç kişi binebiliriz?","Tekne kapasitesi sınırlıdır; grup sayınızı WhatsApp'tan yazın, size en uygun planlamayı yapalım."],
+  ["Yüzme molası veriliyor mu?","Evet, mavi bayraklı koylarda yüzme ve fotoğraf molaları veriyoruz. Mayo, havlu ve güneş kremi getirmeyi unutmayın."],
+  ["Çocuklarla binebilir miyiz?","Evet, her yaşa uygundur. Çocuklar için can yeleği bulunur; bebekli aileler için sakin rota önerilir."],
+  ["Yiyecek-içecek dahil mi?","Hayır, yiyecek ve içecekler fiyata dahil değildir. Yanınızda getirebilir veya hareket öncesi sahilden temin edebilirsiniz."]],
+ en:[
+  ["Is the boat private to us?","Yes — the boat and captain are exclusively yours, no other guests. Route and breaks are planned around your group."],
+  ["Which routes can I choose from?","Two options: the Darboğaz route or the Butterfly Valley route. Just tell us your preference on WhatsApp when booking."],
+  ["How many people can join?","Boat capacity is limited; message us your group size on WhatsApp and we'll plan the best option."],
+  ["Are there swimming breaks?","Yes — swimming and photo breaks at blue-flag bays. Don't forget swimsuit, towel and sunscreen."],
+  ["Can we bring children?","Yes, suitable for all ages. Life jackets are available for kids; a calm route is recommended for families with babies."],
+  ["Are food and drinks included?","No — food and drinks are not included. You may bring your own or buy at the beach before departure."]]},
+"Araba Kiralama":{
+ tr:[
+  ["Aracı havalimanında teslim alabilir miyim?","Evet, Dalaman Havalimanı'nda teslim ve iade mümkündür. Uçuş bilginizi WhatsApp'tan iletmeniz yeterli."],
+  ["Depozito alıyor musunuz?","Araç sınıfına göre kredi kartından provizyon veya nakit depozito alınır; araç sorunsuz iade edildiğinde iade edilir."],
+  ["Ek sürücü ekleyebilir miyim?","Evet, ek sürücünün ehliyet ve kimlik bilgilerini teslimde vermeniz yeterli."]],
+ en:[
+  ["Can I pick the car up at the airport?","Yes, pickup and return at Dalaman Airport is possible. Just send us your flight details on WhatsApp."],
+  ["Do you take a deposit?","Depending on the car class, a credit-card hold or cash deposit is taken and returned when the car comes back without issues."],
+  ["Can I add an extra driver?","Yes, just provide the extra driver's licence and ID at handover."]]},
+"Motosiklet & Scooter Kiralama":{
+ tr:[
+  ["Hangi ehliyet gerekiyor?","50cc scooter için B veya A1 ehliyet yeterlidir. 125cc ve üzeri motosikletler için A1, A2 veya A sınıfı ehliyet gerekir."],
+  ["Kask veriyor musunuz?","Evet, sürücü ve yolcu için kask ücretsiz verilir; kask takmak yasal zorunluluktur."]],
+ en:[
+  ["Which licence do I need?","A B or A1 licence is enough for a 50cc scooter. Motorbikes of 125cc and above require an A1, A2 or A licence."],
+  ["Do you provide helmets?","Yes, helmets for rider and passenger are free — wearing one is required by law."]]},
+"Havuzlu Villa Kiralama":{
+ tr:[
+  ["Villaları önceden görebilir miyim?","Evet, WhatsApp'tan tarih ve kişi sayınızı yazın; uygun villaların fotoğraf, video ve konumlarını gönderelim."],
+  ["Ödeme nasıl yapılıyor?","Rezervasyonu kesinleştirmek için ön ödeme alınır, kalan tutar girişte ödenir. Detaylar villaya göre değişir."],
+  ["Transfer ve araç ayarlayabilir misiniz?","Evet, havalimanı transferini, araç kiralamayı ve aktiviteleri villanızla birlikte tek seferde planlayabiliriz."]],
+ en:[
+  ["Can I see the villas beforehand?","Yes — send us your dates and group size on WhatsApp and we'll share photos, videos and locations of available villas."],
+  ["How does payment work?","A deposit confirms the booking and the balance is paid at check-in. Details vary by villa."],
+  ["Can you arrange transfer and a car?","Yes, we can plan your airport transfer, car rental and activities together with your villa."]]},
+"VIP Transfer · Marmaris":{
+ tr:[
+  ["Uçağım rötar yaparsa ne olur?","Uçuşunuzu anlık takip ediyoruz; rötar olsa bile şoförünüz sizi bekler ve ek ücret ödemezsiniz."],
+  ["Sizi havalimanında nasıl bulacağım?","Şoförünüz terminal çıkışında isminizin yazılı olduğu tabela ile sizi karşılar ve bagajlarınıza yardımcı olur."],
+  ["Yolculuk ne kadar sürüyor?","Dalaman Havalimanı'ndan Marmaris merkeze yaklaşık 1,5 saat sürer; İçmeler biraz daha uzundur. Trafiğe göre değişebilir."],
+  ["Fiyat kişi başı mı?","Hayır, fiyat araç başıdır. Mercedes Vito araç tamamen size özeldir; grubunuzdaki herkes aynı fiyata yolculuk eder."],
+  ["Dönüş transferi de yapıyor musunuz?","Evet, Marmaris'teki otelinizden Dalaman Havalimanı'na dönüş transferi de aynı fiyatla yapılır. Gidiş-dönüş için WhatsApp'tan yazmanız yeterli."],
+  ["Gece geç saatte inersem hizmet var mı?","Evet, 7 gün 24 saat hizmet veriyoruz. Uçağınız gece yarısı da inse şoförünüz kapıda olur."]],
+ en:[
+  ["What if my flight is delayed?","We track your flight in real time; even if it's delayed, your driver waits and there is no extra charge."],
+  ["How do I find you at the airport?","Your driver greets you at the terminal exit with a name sign and helps with your luggage."],
+  ["How long is the ride?","About 1.5 hours from Dalaman Airport to Marmaris center; İçmeler is slightly longer. Depends on traffic."],
+  ["Is the price per person?","No — the price is per vehicle. The whole Mercedes Vito is yours; your entire group rides for the same price."],
+  ["Do you do return transfers too?","Yes — return from your Marmaris hotel to Dalaman Airport is the same price. Just message us on WhatsApp for a round trip."],
+  ["Do you operate late at night?","Yes, we operate 24/7. Even if your flight lands at midnight, your driver will be at the door."]]},
+"VIP Transfer · Fethiye / Ölüdeniz":{
+ tr:[
+  ["Uçağım rötar yaparsa ne olur?","Uçuşunuzu anlık takip ediyoruz; rötar olsa bile şoförünüz sizi bekler ve ek ücret ödemezsiniz."],
+  ["Sizi havalimanında nasıl bulacağım?","Şoförünüz terminal çıkışında isminizin yazılı olduğu tabela ile sizi karşılar ve bagajlarınıza yardımcı olur."],
+  ["Araçta başka yolcu olacak mı?","Hayır, transfer paylaşımsızdır. Mercedes Vito aracın tamamı sadece size ve sevdiklerinize tahsis edilir."],
+  ["Çocuk koltuğu var mı?","Evet, talep etmeniz halinde ücretsiz çocuk koltuğu araçta hazır bulunur. Rezervasyonda belirtmeniz yeterli."],
+  ["Gece geç saatte inersem hizmet var mı?","Evet, 7 gün 24 saat hizmet veriyoruz. Uçağınız gece yarısı da inse şoförünüz kapıda olur."],
+  ["Yolculuk ne kadar sürüyor?","Dalaman Havalimanı'ndan Fethiye yaklaşık 50 dk, Ölüdeniz ve Hisarönü yaklaşık 1 saat 10 dk sürer; trafiğe göre değişebilir."]],
+ en:[
+  ["What if my flight is delayed?","We track your flight in real time; even if it's delayed, your driver waits and there is no extra charge."],
+  ["How do I find you at the airport?","Your driver greets you at the terminal exit with a name sign and helps with your luggage."],
+  ["Will there be other passengers?","No — the transfer is private. The whole Mercedes Vito is reserved for you and your companions only."],
+  ["Is a child seat available?","Yes — a free child seat is ready in the vehicle on request. Just mention it when booking."],
+  ["Do you operate late at night?","Yes, we operate 24/7. Even if your flight lands at midnight, your driver will be at the door."],
+  ["How long is the ride?","From Dalaman Airport: about 50 min to Fethiye, around 1h 10min to Ölüdeniz and Hisarönü, depending on traffic."]]},
+"Sür & Uç":{
+ tr:[
+  ["Tura geç kalırsam ne yapmalıyım?","Transfer araçları ve çıkış saatleri organize gruplar halinde dakik işler. Gecikme durumunda hemen WhatsApp hattımızdan tur sorumlusuyla iletişime geçin."],
+  ["Kendi telefonum/kameramla çekim yapabilir miyim?","Tur boyunca profesyonel ekibimiz çekimlerinizi yapar; bu çekimleri tur sonunda ek ücretle dijital olarak satın alabilirsiniz."],
+  ["Tur günü ne giymeliyim?","Spor pantolon veya tayt ile kapalı spor ayakkabı zorunludur. Terlik, sandalet, şort veya etekle katılım güvenlik gerekçesiyle yasaktır. Güneş gözlüğü ve krem önerilir."],
+  ["Daha önce hiç ata binmedim, katılabilir miyim?","Evet. Binicilik eğitimi gerekmez; tur öncesi eğitmenlerimiz at yönetimi ve güvenlik kuralları hakkında bilgilendirme yapar. Atlarımız uysal ve özel eğitimlidir."],
+  ["Eşyalarım kaybolursa sorumluluk kimde?","Tur süresince unutulan veya kaybedilen kişisel eşyaların sorumluluğu katılımcıya aittir. Kayıp durumunda hemen rehberinize bilgi verin."],
+  ["Kilo, yaş veya sağlık sınırı var mı?","At turu için üst kilo sınırı 100-110 kg, alt yaş sınırı 6'dır. Hamileler ile ciddi bel/boyun fıtığı veya ileri eklem rahatsızlığı olanlar güvenlik nedeniyle katılamaz."],
+  ["Sigorta güvencesi var mı?","Evet. Transfer yolculuğundan aktivitelere kadar tüm süreç koltuk ve üçüncü şahıs mali mesuliyet sigortası ile koruma altındadır."],
+  ["Fiyata neler dahil? Ekstra öder miyim?","Gidiş-dönüş transfer, profesyonel rehberlik, kask ve koruyucu ekipman, giriş ücretleri ve zorunlu seyahat sigortası dahildir. Fotoğraf/video hariçtir. Sürpriz ücret yoktur."],
+  ["Paket turu iptal edersem haklarım neler?","Tur kalkışından en az 48 saat önce iletilen iptallerde ücretin tamamı iade edilir. Son 48 saat içindeki iptallerde iade yapılmaz."],
+  ["Hava şartları tura engel olursa ne olur?","Güvenlik gerekçesiyle iptal edilen turlarda ücretiniz eksiksiz iade edilir veya talebinize göre uygun bir tarihe ertelenir."]],
+ en:[
+  ["What if I'm late for the tour?","Transfers and departure times run punctually for organized groups. If delayed, contact us immediately on WhatsApp."],
+  ["Can I film with my own phone/camera?","Our professional team shoots throughout the tour; you can buy the footage digitally at the end for an extra fee."],
+  ["What should I wear on tour day?","Sport pants or leggings and closed sport shoes are mandatory. Flip-flops, sandals, shorts or skirts are not allowed for safety. Sunglasses and sunscreen recommended."],
+  ["I've never ridden a horse — can I join?","Yes. No riding experience needed; our instructors brief you on horse handling and safety before the tour. Our horses are gentle and specially trained."],
+  ["Who is responsible if I lose my belongings?","Personal items forgotten or lost during the tour are the participant's responsibility. Inform your guide immediately if something is lost."],
+  ["Weight, age or health limits?","For the horse tour: max weight 100-110 kg, minimum age 6. Pregnant guests and those with serious disc or joint conditions cannot join for safety."],
+  ["Is there insurance coverage?","Yes. The whole process — from transfer to activities — is covered by seat and third-party liability insurance."],
+  ["What's included? Any extras?","Round-trip transfer, professional guiding, helmet and protective equipment, entrance fees and mandatory travel insurance are included. Photos/video are extra. No surprise fees."],
+  ["What are my rights if I cancel?","Cancellations made at least 48 hours before departure get a full refund. No refund within the last 48 hours."],
+  ["What if weather prevents the tour?","If we cancel for safety reasons, you get a full refund or we reschedule to a date of your choice."]]}
+};
+
+const L = {
+ tr:{about:'Bu Deneyim Hakkında',inc:'Dahil Olanlar',exc:'Dahil Olmayanlar',info:'Önemli Bilgiler',bring:'Getirmeniz Gerekenler',ban:'İzin Verilmeyenler',prog:'Tur Programı',reg:'Ücretsiz Otel Transferi Bölgeleri',extra:'Ekstralar (ücretli)',faq:'Sık Sorulan Sorular',dep:'Ön ödeme',depNote:'kalan tutar aktivite günü ödenir',book:"WhatsApp'tan Rezervasyon",pp:'kişi başı',det:'Detaylar',pkg:'Paket Tur',sched:'Dahil Aktiviteler',pv:'araç başı',reg2:'Hizmet Bölgeleri',d:'günlük',n:'gecelik',ask:'Fiyat için yazın',askB:'Teklif Al',quote:"WhatsApp'tan Fiyat Al"},
+ en:{about:'About This Experience',inc:'Included',exc:'Not Included',info:'Important Information',bring:'What to Bring',ban:'Not Allowed',prog:'Tour Program',reg:'Free Hotel Transfer Areas',extra:'Extras (paid)',faq:'Frequently Asked Questions',dep:'Deposit',depNote:'remaining balance paid on activity day',book:'Book on WhatsApp',pp:'per person',det:'Details',pkg:'Package Tour',sched:'Included Activities',pv:'per vehicle',reg2:'Service Areas',d:'per day',n:'per night',ask:'Ask for price',askB:'Get Quote',quote:'Get a Price on WhatsApp'}
+};
 
 let lang = 'tr';
 
-function card(item, isPkg){
+function src(x){ return /^https?:/.test(x) ? x : IMG + x; }
+
+function card(item, i, isPkg, typ){
   const d = item[lang];
-  const msgTr = 'Merhaba, ' + item.tr.n + ' rezervasyonu yapmak istiyorum.';
-  const msgEn = 'Hello, I would like to book ' + item.en.n + '.';
-  const msg = encodeURIComponent(lang==='tr' ? msgTr : msgEn);
-  const tag = isPkg ? (lang==='tr'?'Paket Tur':'Package Tour') : item.tag[lang];
-  return `<div class="card">
-    <div class="im"><img loading="lazy" src="${IMG+item.img}" alt="${d.n}"><span class="badge${isPkg?' pkg':''}">${tag}</span></div>
+  const ty = typ || (isPkg?'p':'a');
+  const tag = isPkg ? L[lang].pkg : (item.tag ? item.tag[lang] : '');
+  const msg = encodeURIComponent(item.p===null
+    ? (lang==='tr' ? 'Merhaba, ' + item.tr.n + ' için fiyat ve müsaitlik öğrenmek istiyorum.' : 'Hello, I would like a price and availability for ' + item.en.n + '.')
+    : (lang==='tr' ? 'Merhaba, ' + item.tr.n + ' rezervasyonu yapmak istiyorum.' : 'Hello, I would like to book ' + item.en.n + '.'));
+  const unit = item.u ? L[lang][item.u] : (item.pv?L[lang].pv:L[lang].pp);
+  return `<div class="card" onclick="openM('${ty}',${i})">
+    <div class="im"><img loading="lazy" src="${src(item.img)}" alt="${d.n}">${tag?`<span class="badge${isPkg?' pkg':''}">${tag}</span>`:''}</div>
     <div class="bd">
       <h3>${d.n}</h3>
       <p class="loc">📍 ${d.loc}</p>
       <div class="feats">${d.f.map(x=>`<span>${x}</span>`).join('')}</div>
       <div class="prow">
-        <div class="price"><small>${lang==='tr'?'kişi başı':'per person'}</small><b>${item.p}</b></div>
-        <a class="bk" href="${WA+msg}" target="_blank" rel="noopener">${lang==='tr'?'Rezervasyon':'Book Now'}</a>
+        <div class="price"><small>${unit}</small><b>${item.p===null?L[lang].ask:item.p}</b>${item.old?`<span class="old">${item.old}</span>`:''}</div>
+        <a class="bk" href="${WA+msg}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${item.p===null?L[lang].askB:(lang==='tr'?'Rezervasyon':'Book Now')}</a>
       </div>
+      <span class="more">${L[lang].det} →</span>
     </div>
   </div>`;
 }
 
+function sec(title, cls, items){
+  if(!items || !items.length) return '';
+  return `<div class="msec ${cls}"><h4>${title}</h4><ul>${items.map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+}
+
+function openM(type, i){
+  const item = ({a:A,p:P,t:T,r:R,h:H})[type][i];
+  const d = item[lang], t = L[lang];
+  const msg = encodeURIComponent(item.p===null
+    ? (lang==='tr' ? 'Merhaba, ' + item.tr.n + ' için fiyat ve müsaitlik öğrenmek istiyorum.' : 'Hello, I would like a price and availability for ' + item.en.n + '.')
+    : (lang==='tr' ? 'Merhaba, ' + item.tr.n + ' rezervasyonu yapmak istiyorum.' : 'Hello, I would like to book ' + item.en.n + '.'));
+  const unit = item.u ? t[item.u] : (item.pv?t.pv:t.pp);
+  let h = `<div class="mhero"><img src="${src(item.img)}" alt="${d.n}"></div><div class="mbody">`;
+  h += `<h3>${d.n}</h3><p class="mmeta">📍 ${d.loc}</p>`;
+  h += item.p===null
+    ? `<div class="mprice"><b>${t.ask}</b><span style="color:var(--gray);font-size:.85rem">· ${unit}</span></div>`
+    : `<div class="mprice"><b>${item.p}</b>${item.old?`<span class="old">${item.old}</span>`:''}<span style="color:var(--gray);font-size:.85rem">/ ${unit}</span></div>`;
+  if(item.dep) h += `<p class="mdep">💳 ${t.dep}: <b>${item.dep}</b> — ${t.depNote}</p>`;
+  h += `<div class="msec"><h4>${t.about}</h4><p>${d.desc}</p></div>`;
+  h += sec(t.inc, 'inc', d.inc);
+  h += sec(t.exc, 'exc', d.exc);
+  h += sec(t.info, '', d.info);
+  if(d.prog && d.prog.length){
+    h += `<div class="msec"><h4>${t.prog}</h4>${d.prog.map((s,j)=>`<div class="step"><span class="n">${j+1}</span><div><b>${s[0]}</b><p>${s[1]}</p></div></div>`).join('')}</div>`;
+  }
+  h += sec(item.pv?t.reg2:t.reg, '', d.reg);
+  h += sec(t.bring, '', d.bring);
+  h += sec(t.ban, 'exc', d.ban);
+  h += sec(t.extra, '', d.extra);
+  const fq = (FAQ[item.tr.n] && FAQ[item.tr.n][lang]) || null;
+  if(fq) h += `<div class="msec"><h4>${t.faq}</h4>${fq.map(x=>`<details class="faqd"><summary>${x[0]}</summary><p>${x[1]}</p></details>`).join('')}</div>`;
+  h += `<div class="mcta"><a href="${WA+msg}" target="_blank" rel="noopener">${item.p===null?t.quote:t.book+' — '+item.p}</a></div></div>`;
+  document.getElementById('msheet').innerHTML = h;
+  const m = document.getElementById('modal');
+  m.classList.add('open');
+  m.querySelector('.sheet').scrollTop = 0;
+  document.body.classList.add('lock');
+}
+
+function closeM(){
+  document.getElementById('modal').classList.remove('open');
+  document.body.classList.remove('lock');
+}
+
+const CATS = [
+ {i:'🪂',t:'a',k:0,tr:'Yamaç Paraşütü',en:'Paragliding'},
+ {i:'⛵',t:'a',k:2,tr:'Tekne Turu',en:'Boat Tour'},
+ {i:'🤿',t:'a',k:1,tr:'Tüplü Dalış',en:'Diving'},
+ {i:'🚙',t:'a',k:5,tr:'Jeep Safari',en:'Jeep Safari'},
+ {i:'🏍️',t:'a',k:6,tr:'ATV Turu',en:'ATV Tour'},
+ {i:'🛶',t:'a',k:3,tr:'Rafting',en:'Rafting'},
+ {i:'🐎',t:'a',k:4,tr:'At Safari',en:'Horse Safari'},
+ {i:'🚐',t:'s',k:'transfer',tr:'Transfer',en:'Transfer'},
+ {i:'🚗',t:'r',k:0,tr:'Araba Kiralama',en:'Car Rental'},
+ {i:'🛵',t:'r',k:1,tr:'Motor Kiralama',en:'Scooter Rental'},
+ {i:'🏡',t:'s',k:'stay',tr:'Villa & Ev',en:'Villas & Homes'}
+];
+
+function goCat(j){
+  const c = CATS[j];
+  if(c.t==='s'){ document.getElementById(c.k).scrollIntoView({behavior:'smooth'}); return; }
+  openM(c.t, c.k);
+}
+
+function buildSearch(){
+  const sq = document.getElementById('sq'), sg = document.getElementById('sg'), sd = document.getElementById('sd');
+  const qv = sq.value, gv = sg.value || '2';
+  const grp = (lbl, arr, ty) => `<optgroup label="${lbl}">${arr.map((x,i)=>`<option value="${ty}:${i}">${x[lang].n}</option>`).join('')}</optgroup>`;
+  sq.innerHTML = `<option value="">${lang==='tr'?'Tüm aktiviteler':'All activities'}</option>`
+    + grp(lang==='tr'?'Aktiviteler':'Activities', A, 'a')
+    + grp(lang==='tr'?'Paket Turlar':'Packages', P, 'p')
+    + grp(lang==='tr'?'Havalimanı Transferi':'Airport Transfer', T, 't')
+    + grp(lang==='tr'?'Araç Kiralama':'Vehicle Rental', R, 'r')
+    + grp(lang==='tr'?'Villa & Günlük Ev':'Villas & Holiday Homes', H, 'h');
+  sq.value = qv;
+  let g = '';
+  for(let n=1;n<=10;n++) g += `<option value="${n}">${n} ${lang==='tr'?'Kişi':(n>1?'Guests':'Guest')}</option>`;
+  g += `<option value="10+">10+ ${lang==='tr'?'Kişi':'Guests'}</option>`;
+  sg.innerHTML = g; sg.value = gv;
+  if(!sd.min){ const d = new Date(); sd.min = new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10); }
+  document.getElementById('cats').innerHTML = CATS.map((c,j)=>`<button type="button" class="cat" onclick="goCat(${j})"><i>${c.i}</i>${c[lang]}</button>`).join('');
+}
+
+function doSearch(e){
+  e.preventDefault();
+  const q = document.getElementById('sq').value, d = document.getElementById('sd').value, g = document.getElementById('sg').value;
+  let name = lang==='tr' ? 'aktiviteleriniz' : 'your activities';
+  if(q){ const [ty, i] = q.split(':'); name = ({a:A,p:P,t:T,r:R,h:H})[ty][+i][lang].n; }
+  const dt = d ? d.split('-').reverse().join('.') : (lang==='tr' ? 'esnek tarih' : 'flexible date');
+  const msg = lang==='tr'
+    ? `Merhaba, ${name} için müsaitlik sormak istiyorum.\n📅 Tarih: ${dt}\n👥 Kişi: ${g}`
+    : `Hello, I'd like to check availability for ${name}.\n📅 Date: ${dt}\n👥 Guests: ${g}`;
+  window.open(WA + encodeURIComponent(msg), '_blank', 'noopener');
+  return false;
+}
+
 function render(){
-  document.getElementById('actGrid').innerHTML = activities.map(a=>card(a,false)).join('');
-  document.getElementById('pkgGrid').innerHTML = packages.map(p=>card(p,true)).join('');
-  document.querySelectorAll('[data-tr]').forEach(el=>{
-    el.textContent = el.dataset[lang];
-  });
+  buildSearch();
+  document.getElementById('actGrid').innerHTML = A.map((a,i)=>card(a,i,false)).join('');
+  document.getElementById('pkgGrid').innerHTML = P.map((p,i)=>card(p,i,true)).join('');
+  document.getElementById('trfGrid').innerHTML = T.map((x,i)=>card(x,i,false,'t')).join('');
+  document.getElementById('rentGrid').innerHTML = R.map((x,i)=>card(x,i,false,'r')).join('');
+  document.getElementById('stayGrid').innerHTML = H.map((x,i)=>card(x,i,false,'h')).join('');
+  document.querySelectorAll('[data-tr]').forEach(el=>{ el.textContent = el.dataset[lang]; });
   document.getElementById('langBtn').textContent = lang==='tr' ? 'EN' : 'TR';
   document.documentElement.lang = lang;
 }
@@ -234,6 +894,7 @@ function render(){
 function toggleLang(){
   lang = lang==='tr' ? 'en' : 'tr';
   render();
+  closeM();
 }
 
 render();
