@@ -238,39 +238,6 @@ function sendCart(){
 }
 function clearCart(){ cart = []; saveCart(); renderCards(); renderBuilder(); }
 
-// ---- Hava durumu / uçuş uygunluğu ----
-let WX = null;
-function loadWeather(){
-  const url = 'https://api.open-meteo.com/v1/forecast?latitude=36.55&longitude=29.13&hourly=temperature_2m,wind_speed_10m,wind_gusts_10m,precipitation_probability,weather_code&timezone=Europe%2FIstanbul&forecast_days=4&wind_speed_unit=kmh';
-  fetch(url).then(r=>r.json()).then(j=>{ WX = j; renderWeather(); }).catch(()=>{
-    const el = document.getElementById('wxbox'); if (el) el.innerHTML = `<p class="bempty">${w('Hava durumu şu an yüklenemedi.','Weather could not be loaded right now.')}</p>`;
-  });
-}
-function renderWeather(){
-  const el = document.getElementById('wxbox');
-  if (!el || !WX || !WX.hourly) return;
-  const H_ = WX.hourly, days = {};
-  H_.time.forEach((tm, k) => {
-    const hr = +tm.slice(11,13); if (hr < 9 || hr > 18) return;
-    const d = tm.slice(0,10);
-    const o = days[d] || (days[d] = {t:-99, ws:0, wg:0, pp:0, storm:false});
-    o.t = Math.max(o.t, H_.temperature_2m[k]); o.ws = Math.max(o.ws, H_.wind_speed_10m[k]);
-    o.wg = Math.max(o.wg, H_.wind_gusts_10m[k]); o.pp = Math.max(o.pp, H_.precipitation_probability[k] || 0);
-    if (H_.weather_code[k] >= 95) o.storm = true;
-  });
-  const loc = {tr:'tr-TR',en:'en-GB',ru:'ru-RU',de:'de-DE',pl:'pl-PL'}[lang];
-  el.innerHTML = Object.keys(days).slice(0,4).map((d, j) => {
-    const o = days[d];
-    let cls = 'good', txt = w('Uçuşa uygun görünüyor','Looks good for flying');
-    if (o.storm || o.ws > 25 || o.wg > 38 || o.pp >= 60) { cls = 'bad'; txt = w('Riskli — bizimle teyit edin','Risky — check with us'); }
-    else if (o.ws > 18 || o.wg > 28 || o.pp >= 35) { cls = 'mid'; txt = w('Değişken — sabah saatleri önerilir','Variable — mornings recommended'); }
-    const dn = j===0 ? w('Bugün','Today') : new Date(d+'T12:00').toLocaleDateString(loc,{weekday:'long'});
-    return `<div class="wx ${cls}"><b>${dn}</b><div class="wt">${Math.round(o.t)}°C</div>
-      <small>💨 ${Math.round(o.ws)} km/h · ${w('Esinti','Gusts')} ${Math.round(o.wg)}</small>
-      <small>🌧 %${o.pp}</small><span class="wtag">${txt}</span></div>`;
-  }).join('');
-}
-
 // ---- Yorumlar & Instagram ----
 function renderSocial(){
   const rv = document.getElementById('revlist');
@@ -300,7 +267,6 @@ function render(){
   document.querySelectorAll('[data-hen]').forEach(el=>{ el.href = lang==='tr' ? el.dataset.htr : el.dataset.hen; });
   const cg = document.getElementById('cguests'); const cgv = cg.value || '2'; guestOpts(cg); cg.value = cgv;
   renderBuilder();
-  renderWeather();
   renderSocial();
   document.getElementById('langSel').value = lang;
   document.documentElement.lang = lang;
@@ -313,4 +279,3 @@ function setLang(l){
 }
 
 render();
-loadWeather();

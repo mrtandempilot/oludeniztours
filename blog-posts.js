@@ -133,7 +133,7 @@ module.exports = [
 <h2>Ne giymeliyim?</h2>
 <p>Ayağınızdan çıkmayacak spor ayakkabı ve güneş gözlüğü yeterli. Zirve aşağıdan serin olabildiği için ince bir rüzgârlık iyi fikir. Terlikle uçulmaz.</p>
 <h2>Hava kötüyse ne olur?</h2>
-<p>Uçuş kararını her sabah pilot ekibi gerçek koşullara göre verir. Hava uygun değilse uçuşunuz başka bir güne ertelenir ya da ücretiniz iade edilir. Önümüzdeki günlerin rüzgâr tahminini <a href="/#weather">ana sayfadaki hava durumu bölümünden</a> takip edebilirsiniz.</p>
+<p>Uçuş kararını her sabah pilot ekibi gerçek koşullara göre verir. Hava uygun değilse uçuşunuz başka bir güne ertelenir ya da ücretiniz iade edilir.</p>
 <h2>En iyi saat hangisi?</h2>
 <p>Sabah uçuşları genellikle daha sakin havada yapılır; gün batımı uçuşları ise en etkileyici renkleri sunar. Yaz aylarında erken rezervasyon önerilir.</p>
 <p>Paraşütü bir tekne turu veya dalışla birleştirmek isterseniz paketlerimize göz atın: {{link:Uç & Dal}}.</p>`
@@ -155,7 +155,7 @@ module.exports = [
 <h2>What should I wear?</h2>
 <p>Trainers that won't come off and sunglasses are enough. The summit can be cooler than the beach, so a light windbreaker is a good idea. Flip-flops are not allowed.</p>
 <h2>What if the weather is bad?</h2>
-<p>The pilots decide every morning based on real conditions. If it's not suitable, your flight is moved to another day or refunded. You can follow the wind forecast in the <a href="/?lang=en#weather">weather section on our homepage</a>.</p>
+<p>The pilots decide every morning based on real conditions. If it's not suitable, your flight is moved to another day or refunded.</p>
 <h2>What's the best time to fly?</h2>
 <p>Morning flights usually have calmer air; sunset flights offer the most stunning colours. Book early in summer.</p>
 <p>Want to combine your flight with a boat trip or a dive? See our packages: {{link:Uç & Dal}}.</p>`

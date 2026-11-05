@@ -91,6 +91,7 @@ h2{font-size:1.45rem;font-weight:800;margin-bottom:4px}
 .grid{display:grid;gap:16px}
 @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1200px){.grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}section:has(>.grid){max-width:1400px}.grid .card h3{font-size:.95rem}.grid .card .bd{padding:12px}.grid .prow{flex-direction:column;align-items:stretch;gap:8px}.grid .bk{text-align:center}.grid .feats span{font-size:.68rem}}
 .card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer}
 .card .im{position:relative;aspect-ratio:4/3;overflow:hidden}
 .card .im img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
@@ -215,16 +216,6 @@ select.lang-btn{-webkit-appearance:none;appearance:none;padding:6px 12px;text-al
 .cartbar>b{margin-left:auto}
 .cartbar button{border:none;background:var(--green);color:#fff;font-weight:800;font-family:inherit;padding:9px 16px;border-radius:99px;cursor:pointer}
 @media(min-width:960px){.cartbar{left:auto;right:24px;bottom:24px;width:380px}}
-.wxgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-@media(min-width:760px){.wxgrid{grid-template-columns:repeat(4,1fr)}}
-.wx{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;border-top:4px solid #94a3b8}
-.wx.good{border-top-color:#22c55e}.wx.mid{border-top-color:var(--amber)}.wx.bad{border-top-color:var(--red)}
-.wx b{text-transform:capitalize;font-size:.9rem}
-.wt{font-size:1.6rem;font-weight:800;margin:2px 0}
-.wx small{display:block;color:var(--gray);font-size:.76rem}
-.wtag{display:inline-block;margin-top:8px;font-size:.72rem;font-weight:800;padding:3px 9px;border-radius:99px;background:#f1f5f9}
-.wx.good .wtag{background:#dcfce7;color:#166534}.wx.mid .wtag{background:#fef3c7;color:#92400e}.wx.bad .wtag{background:#fee2e2;color:#991b1b}
-.wxnote{color:var(--gray);font-size:.78rem;margin-top:10px}
 .revlist{display:grid;gap:12px;margin:10px 0 14px}
 .revlist:empty{display:none}
 @media(min-width:760px){.revlist{grid-template-columns:repeat(3,1fr)}}
@@ -361,12 +352,6 @@ select.lang-btn{-webkit-appearance:none;appearance:none;padding:6px 12px;text-al
   </div>
 </section>
 
-<section id="weather">
-  <h2 data-tr="Uçuş Hava Durumu" data-en="Flying Weather">Uçuş Hava Durumu</h2>
-  <p class="sub" data-tr="Ölüdeniz için 4 günlük rüzgâr ve yağış tahmini (09:00–18:00)" data-en="4-day wind and rain forecast for Ölüdeniz (09:00–18:00)">Ölüdeniz için 4 günlük rüzgâr ve yağış tahmini (09:00–18:00)</p>
-  <div class="wxgrid" id="wxbox"><p class="bempty" data-tr="Yükleniyor…" data-en="Loading…">Yükleniyor…</p></div>
-  <p class="wxnote" data-tr="Tahmini bilgidir; uçuş kararını her sabah pilot ekibimiz Babadağ'daki gerçek koşullara göre verir. Hava uygun olmazsa uçuşunuz ücretsiz ertelenir veya ücreti iade edilir." data-en="This is a forecast only; our pilots make the final call every morning based on real conditions on Babadağ. If the weather isn't suitable, your flight is rescheduled free of charge or fully refunded.">Tahmini bilgidir; uçuş kararını her sabah pilot ekibimiz Babadağ'daki gerçek koşullara göre verir. Hava uygun olmazsa uçuşunuz ücretsiz ertelenir veya ücreti iade edilir.</p>
-</section>
 
 <section>
   <h2 data-tr="Neden Bizi Seçmelisiniz?" data-en="Why Choose Us?">Neden Bizi Seçmelisiniz?</h2>
