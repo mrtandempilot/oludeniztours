@@ -1,26 +1,21 @@
-# Oludeniz Tours
+# Oludeniz Tours — Next.js
 
-Statik site (Vercel). Build adımı yok — üretilen sayfalar repoya commit edilir.
+Next.js 15 (App Router) site, deployed on Vercel.
 
-| Dosya | Ne işe yarar |
+| Yol | Ne |
 |---|---|
-| `index.html` | Ana sayfa (markup + CSS) |
-| `data.js` | Tüm hizmetler, fiyatlar, SSS, SEO adresleri (`SLUG`), ayarlar (`CFG`), yorumlar (`REVIEWS`) |
-| `i18n.js` | RU / DE / PL çevirileri |
-| `app.js` | Sayfa mantığı: kartlar, modal, sepet/paket oluşturucu, hava durumu |
-| `blog-posts.js` | Blog yazıları (TR + EN) |
-| `build.js` | Hizmet sayfalarını, blogu, `sitemap.xml` ve `robots.txt`'yi üretir |
+| `lib/catalog.js` | Tüm hizmetler, fiyatlar, SSS, SEO adresleri (`SLUG`), ayarlar (`CFG`), yorumlar (`REVIEWS`), RU/DE/PL çeviriler |
+| `lib/blog.js` | Blog yazıları (TR + EN) |
+| `components/HomePage.jsx` | Ana sayfa (kartlar, modal, paket oluşturucu, arama) |
+| `components/Pages.jsx` | Hizmet ve blog sayfaları |
+| `app/` | Rotalar: `/`, `/en`, `/ru`, `/de`, `/pl`, `/<tr-slug>`, `/en/<en-slug>`, `/blog`, `/en/blog`, `/admin` |
+| `public/` | Yasal sayfalar (iletisim, iptal-iade, gizlilik, kullanim-sartlari) |
 
-## Değişiklik yaptıktan sonra
+## Çalıştırma
 
 ```
-node build.js
+npm install
+npm run dev
 ```
 
-Bu komut `/<slug>.html`, `/en/<slug>.html`, `/blog/*`, `/en/blog/*` sayfalarını yeniden üretir ve `index.html` altındaki SEO linklerini günceller.
-
-## Ayarlar (`data.js` → `CFG`)
-- `site`: kendi alan adınıza geçince güncelleyin (canonical + sitemap).
-- `instagram`: kullanıcı adı girilince Instagram bölümü görünür.
-- `googleReviews`: Google işletme profili linki girilince "Google'da tüm yorumları okuyun" butonu görünür.
-- `REVIEWS`: yalnızca gerçek müşteri yorumlarını ekleyin.
+Fiyat veya hizmet değiştirmek için `lib/catalog.js` düzenlenir; push edince Vercel otomatik yayınlar.
