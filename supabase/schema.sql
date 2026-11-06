@@ -1,4 +1,5 @@
--- Oludeniz Tours yönetim paneli — Supabase SQL Editor'de BİR KEZ çalıştır.
+-- Oludeniz Tours yönetim paneli — Supabase SQL Editor'de TAMAMINI çalıştır (hiçbir satırı seçmeden Run).
+-- Tekrar çalıştırmak güvenlidir; var olan veriyi silmez.
 -- Erişim: sadece "staff" tablosundaki e-postayla giriş yapan kullanıcılar okuyup yazabilir.
 
 create table if not exists public.staff (
@@ -58,8 +59,10 @@ create index if not exists cash_supplier_idx on public.cash_entries (supplier_id
 
 -- Erişim kontrolü
 create or replace function public.is_staff() returns boolean
-language sql stable security definer set search_path = '' as $$
-  select exists (select 1 from public.staff s where lower(s.email) = lower(auth.jwt() ->> 'email'));
+language plpgsql stable security definer set search_path = '' as $$
+begin
+  return exists (select 1 from public.staff s where lower(s.email) = lower(auth.jwt() ->> 'email'));
+end;
 $$;
 revoke execute on function public.is_staff() from public, anon;
 grant execute on function public.is_staff() to authenticated;
