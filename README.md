@@ -10,6 +10,7 @@ Next.js 15 (App Router) site, deployed on Vercel.
 | `components/Pages.jsx` | Hizmet ve blog sayfaları |
 | `app/` | Rotalar: `/`, `/en`, `/ru`, `/de`, `/pl`, `/<tr-slug>`, `/en/<en-slug>`, `/blog`, `/en/blog`, `/admin` |
 | `public/` | Yasal sayfalar (iletisim, iptal-iade, gizlilik, kullanim-sartlari) |
+| `the-eye/` | THE EYE — ayrı Next.js uygulaması (generative visual performance dashboard). Bkz. `the-eye/README.md` |
 
 ## Çalıştırma
 
